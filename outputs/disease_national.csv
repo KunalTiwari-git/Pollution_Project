@@ -1,0 +1,589 @@
+location_name,year,cause_name,metric_id,metric_name,val,upper,lower,evidence_strength,source_file
+India,2010,Asthma,1,Number,138433.02963318603,260131.55329312364,76466.24846060389,direct,airpollutiondiseases2nd.csv
+India,2010,Asthma,3,Rate,11.24196972068468,21.12495156152325,6.20972648020689,direct,airpollutiondiseases2nd.csv
+India,2010,Atrial fibrillation and flutter,1,Number,17721.389227287043,23003.09122174406,13302.599447521412,direct,airpollutiondiseases3rd.csv
+India,2010,Atrial fibrillation and flutter,3,Rate,1.4391314098197665,1.8680516902810091,1.080287129391713,direct,airpollutiondiseases3rd.csv
+India,2010,Cardiovascular diseases,1,Number,2174586.0389794614,2361849.312879456,1975856.3781192445,direct,airpollutiondiseases3rd.csv
+India,2010,Cardiovascular diseases,3,Rate,176.5953578420437,191.80276940096368,160.45677562714638,direct,airpollutiondiseases3rd.csv
+India,2010,Chronic obstructive pulmonary disease,1,Number,720470.0631072463,878174.9478350288,530645.9443589954,direct,airpollutiondiseases2nd.csv
+India,2010,Chronic obstructive pulmonary disease,3,Rate,58.5084546337905,71.31546711926156,43.09308013192442,direct,airpollutiondiseases2nd.csv
+India,2010,Chronic respiratory diseases,1,Number,893974.608377309,1053799.4263072354,699179.7982294813,direct,airpollutiondiseases2nd.csv
+India,2010,Chronic respiratory diseases,3,Rate,72.59853739435458,85.5777069505155,56.77949938564347,direct,airpollutiondiseases2nd.csv
+India,2010,Congenital birth defects,1,Number,101329.398585735,128736.02531422004,79001.91840047573,indirect,airpollutiondiseases4th.csv
+India,2010,Congenital birth defects,3,Rate,8.228831180928944,10.454488371587404,6.415645000961822,indirect,airpollutiondiseases4th.csv
+India,2010,Hypertensive heart disease,1,Number,148616.27448969457,221050.3039057452,91947.98588915094,direct,airpollutiondiseases3rd.csv
+India,2010,Hypertensive heart disease,3,Rate,12.068938043479683,17.951213159469884,7.46697862484675,direct,airpollutiondiseases3rd.csv
+India,2010,Interstitial lung disease and pulmonary sarcoidosis,1,Number,22482.738251982075,56779.61536258592,11526.397775313502,direct,airpollutiondiseases2nd.csv
+India,2010,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,1.825794489484112,4.611000122945317,0.9360440577078726,direct,airpollutiondiseases2nd.csv
+India,2010,Ischemic heart disease,1,Number,1088932.64493564,1230188.2141335409,958594.840797452,direct,airpollutiondiseases3rd.csv
+India,2010,Ischemic heart disease,3,Rate,88.43083081161485,99.90201536929358,77.8462640253168,direct,airpollutiondiseases3rd.csv
+India,2010,Ischemic stroke,1,Number,262260.5853522325,341245.8924849655,195338.1717017892,direct,airpollutiondiseases3rd.csv
+India,2010,Ischemic stroke,3,Rate,21.29784753877875,27.7121435598802,15.863163707275994,direct,airpollutiondiseases3rd.csv
+India,2010,Lower respiratory infections,1,Number,512791.2344941141,569845.3893700808,456880.4379568625,strong,airpollutiondiseases1st.csv
+India,2010,Lower respiratory infections,3,Rate,41.64312192321896,46.27641704978252,37.102677468621344,strong,airpollutiondiseases1st.csv
+India,2010,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,122987.6609200366,181908.90659623215,98820.48948045778,indirect,airpollutiondiseases4th.csv
+India,2010,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,9.987671033022265,14.77259022139797,8.025085873409392,indirect,airpollutiondiseases4th.csv
+India,2010,Neonatal preterm birth,1,Number,284343.9522589241,319817.49874152767,239886.6119313033,indirect,airpollutiondiseases4th.csv
+India,2010,Neonatal preterm birth,3,Rate,23.091209590838336,25.97197104277964,19.480885702459947,indirect,airpollutiondiseases4th.csv
+India,2010,Otitis media,1,Number,91.2301630757657,287.0638800439085,33.66511239829993,strong,airpollutiondiseases1st.csv
+India,2010,Otitis media,3,Rate,0.0074086851499854,0.0233120914561147,0.0027339008271939,strong,airpollutiondiseases1st.csv
+India,2010,Pulmonary Arterial Hypertension,1,Number,3384.83136483227,5619.106973899862,1859.545839681362,direct,airpollutiondiseases3rd.csv
+India,2010,Pulmonary Arterial Hypertension,3,Rate,0.274877836697623,0.4563205083732913,0.1510113451920839,direct,airpollutiondiseases3rd.csv
+India,2010,Pulmonary aspiration and foreign body in airway,1,Number,4862.305806190919,7335.698032588716,2209.459932408437,direct,airpollutiondiseases2nd.csv
+India,2010,Pulmonary aspiration and foreign body in airway,3,Rate,0.3948616510867992,0.5957226781857473,0.1794274222345501,direct,airpollutiondiseases2nd.csv
+India,2010,Respiratory infections and tuberculosis,1,Number,1041472.20493874,1201701.1868210444,952440.5416432242,strong,airpollutiondiseases1st.csv
+India,2010,Respiratory infections and tuberculosis,3,Rate,84.57662903051326,97.58862022560578,77.34648124278873,strong,airpollutiondiseases1st.csv
+India,2010,Stroke,1,Number,644698.2509316504,764566.3886879013,546673.883125819,direct,airpollutiondiseases3rd.csv
+India,2010,Stroke,3,Rate,52.35512243831238,62.08946097515816,44.394688590390345,direct,airpollutiondiseases3rd.csv
+India,2010,"Tracheal, bronchus, and lung cancer",1,Number,50000.69974075313,66139.65293908409,41781.11064915427,direct,airpollutiondiseases5th.csv
+India,2010,"Tracheal, bronchus, and lung cancer",3,Rate,4.060493033982126,5.3711168327961705,3.392990690581321,direct,airpollutiondiseases5th.csv
+India,2010,Tuberculosis,1,Number,526776.5748461344,659474.4611598948,452340.05797095,strong,airpollutiondiseases1st.csv
+India,2010,Tuberculosis,3,Rate,42.77885357040954,53.55507961914243,36.7339590026795,strong,airpollutiondiseases1st.csv
+India,2010,Upper respiratory infections,1,Number,1813.1654354154496,4084.445268586663,151.49144258291906,strong,airpollutiondiseases1st.csv
+India,2010,Upper respiratory infections,3,Rate,0.147244851734763,0.3316925892391038,0.0123024267761293,strong,airpollutiondiseases1st.csv
+India,2011,Asthma,1,Number,147437.7679523015,274442.5085779499,79948.24501368738,direct,airpollutiondiseases2nd.csv
+India,2011,Asthma,3,Rate,11.787816878522822,21.941990032336225,6.391952924066976,direct,airpollutiondiseases2nd.csv
+India,2011,Atrial fibrillation and flutter,1,Number,18962.984332914264,24767.47062608711,14067.523186358838,direct,airpollutiondiseases3rd.csv
+India,2011,Atrial fibrillation and flutter,3,Rate,1.5161121189721678,1.980187385765089,1.1247144443262256,direct,airpollutiondiseases3rd.csv
+India,2011,Cardiovascular diseases,1,Number,2332246.113874548,2514399.208877689,2131618.466998268,direct,airpollutiondiseases3rd.csv
+India,2011,Cardiovascular diseases,3,Rate,186.4657237275444,201.0290704030573,170.4253156625523,direct,airpollutiondiseases3rd.csv
+India,2011,Chronic obstructive pulmonary disease,1,Number,741486.6297174267,899851.8234073806,550206.3099079754,direct,airpollutiondiseases2nd.csv
+India,2011,Chronic obstructive pulmonary disease,3,Rate,59.28269757725698,71.9441745453084,43.989618919768425,direct,airpollutiondiseases2nd.csv
+India,2011,Chronic respiratory diseases,1,Number,925431.6175335454,1080638.6224341227,747797.0772169516,direct,airpollutiondiseases2nd.csv
+India,2011,Chronic respiratory diseases,3,Rate,73.98930811683059,86.39828430686543,59.78722501672552,direct,airpollutiondiseases2nd.csv
+India,2011,Congenital birth defects,1,Number,98343.5625641864,126394.85084616533,76332.47573218694,indirect,airpollutiondiseases4th.csv
+India,2011,Congenital birth defects,3,Rate,7.862679439526092,10.105411773764876,6.102868066385842,indirect,airpollutiondiseases4th.csv
+India,2011,Hypertensive heart disease,1,Number,155358.5994841741,231427.4081329021,97408.8681236936,direct,airpollutiondiseases3rd.csv
+India,2011,Hypertensive heart disease,3,Rate,12.42109634904187,18.50288393286293,7.787949558201072,direct,airpollutiondiseases3rd.csv
+India,2011,Interstitial lung disease and pulmonary sarcoidosis,1,Number,23681.01992562585,57789.75964025056,12503.7677260875,direct,airpollutiondiseases2nd.csv
+India,2011,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,1.893324419223684,4.620356870252582,0.9996904205331352,direct,airpollutiondiseases2nd.csv
+India,2011,Ischemic heart disease,1,Number,1193242.2059575862,1327954.6699548888,1050315.621767528,direct,airpollutiondiseases3rd.csv
+India,2011,Ischemic heart disease,3,Rate,95.40106860613297,106.17148299119432,83.97392598925458,direct,airpollutiondiseases3rd.csv
+India,2011,Ischemic stroke,1,Number,285539.146240041,375725.9724482068,215526.28889139305,direct,airpollutiondiseases3rd.csv
+India,2011,Ischemic stroke,3,Rate,22.82917880726647,30.039717917848705,17.23157140293434,direct,airpollutiondiseases3rd.csv
+India,2011,Lower respiratory infections,1,Number,505331.7161284933,563042.2901006171,448417.5975086473,strong,airpollutiondiseases1st.csv
+India,2011,Lower respiratory infections,3,Rate,40.401844217822536,45.01587010403863,35.851495840937766,strong,airpollutiondiseases1st.csv
+India,2011,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,118376.88014756016,171665.9967222981,96433.31374274258,indirect,airpollutiondiseases4th.csv
+India,2011,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,9.464365916619938,13.724891265894671,7.709952878263462,indirect,airpollutiondiseases4th.csv
+India,2011,Neonatal preterm birth,1,Number,282176.78999564704,318616.31340339186,240262.9872726416,indirect,airpollutiondiseases4th.csv
+India,2011,Neonatal preterm birth,3,Rate,22.56035460950665,25.47373586206404,19.20929851280041,indirect,airpollutiondiseases4th.csv
+India,2011,Otitis media,1,Number,93.3986255555604,303.27643641002504,31.246180356245706,strong,airpollutiondiseases1st.csv
+India,2011,Otitis media,3,Rate,0.0074673261135562,0.024247295286842,0.0024981675815377,strong,airpollutiondiseases1st.csv
+India,2011,Pulmonary Arterial Hypertension,1,Number,3419.9299048581024,5462.648143331302,1932.976616476959,direct,airpollutiondiseases3rd.csv
+India,2011,Pulmonary Arterial Hypertension,3,Rate,0.2734272772556714,0.4367449187525962,0.154543674269869,direct,airpollutiondiseases3rd.csv
+India,2011,Pulmonary aspiration and foreign body in airway,1,Number,4760.950364426347,7094.853658858914,2187.7301291522504,direct,airpollutiondiseases2nd.csv
+India,2011,Pulmonary aspiration and foreign body in airway,3,Rate,0.3806433849551384,0.5672416021490712,0.1749115067342637,direct,airpollutiondiseases2nd.csv
+India,2011,Respiratory infections and tuberculosis,1,Number,1022654.1869405048,1176686.0180143358,934094.599375544,strong,airpollutiondiseases1st.csv
+India,2011,Respiratory infections and tuberculosis,3,Rate,81.76236288119375,94.0773825900467,74.68192334692874,strong,airpollutiondiseases1st.csv
+India,2011,Stroke,1,Number,686962.769730945,809468.9939947975,592332.856331881,direct,airpollutiondiseases3rd.csv
+India,2011,Stroke,3,Rate,54.92345309087279,64.71796475608413,47.35768411680967,direct,airpollutiondiseases3rd.csv
+India,2011,"Tracheal, bronchus, and lung cancer",1,Number,53398.73032244328,71892.2331617252,44554.553666566266,direct,airpollutiondiseases5th.csv
+India,2011,"Tracheal, bronchus, and lung cancer",3,Rate,4.269289092807098,5.747865633537308,3.5621871316968896,direct,airpollutiondiseases5th.csv
+India,2011,Tuberculosis,1,Number,515386.4471390939,634677.2004884785,447530.5029895767,strong,airpollutiondiseases1st.csv
+India,2011,Tuberculosis,3,Rate,41.20573137348069,50.74316248976361,35.78057162735276,strong,airpollutiondiseases1st.csv
+India,2011,Upper respiratory infections,1,Number,1842.62504736086,4068.035608559312,170.55502802426645,strong,airpollutiondiseases1st.csv
+India,2011,Upper respiratory infections,3,Rate,0.1473199637768267,0.3252440638176301,0.0136360680576214,strong,airpollutiondiseases1st.csv
+India,2012,Asthma,1,Number,155905.01497634445,289866.312309779,76704.4608014482,direct,airpollutiondiseases2nd.csv
+India,2012,Asthma,3,Rate,12.279228810479486,22.83014933061483,6.041317048770679,direct,airpollutiondiseases2nd.csv
+India,2012,Atrial fibrillation and flutter,1,Number,20569.707664783036,26888.6633079917,15415.223317876604,direct,airpollutiondiseases3rd.csv
+India,2012,Atrial fibrillation and flutter,3,Rate,1.6200899439884502,2.1177769632161727,1.2141178031608948,direct,airpollutiondiseases3rd.csv
+India,2012,Cardiovascular diseases,1,Number,2505175.818193663,2709096.029212435,2277930.4063921045,direct,airpollutiondiseases3rd.csv
+India,2012,Cardiovascular diseases,3,Rate,197.3100550148928,213.37100681019365,179.41198798949017,direct,airpollutiondiseases3rd.csv
+India,2012,Chronic obstructive pulmonary disease,1,Number,762835.7031761203,903910.7416609148,578133.6137560459,direct,airpollutiondiseases2nd.csv
+India,2012,Chronic obstructive pulmonary disease,3,Rate,60.081673097711935,71.19287870751754,45.53435902890619,direct,airpollutiondiseases2nd.csv
+India,2012,Chronic respiratory diseases,1,Number,956755.19925261,1089380.0021927357,773049.0858816277,direct,airpollutiondiseases2nd.csv
+India,2012,Chronic respiratory diseases,3,Rate,75.35495897307254,85.80061591036645,60.886088935066105,direct,airpollutiondiseases2nd.csv
+India,2012,Congenital birth defects,1,Number,96060.50459615314,122420.57254382684,75010.44790173505,indirect,airpollutiondiseases4th.csv
+India,2012,Congenital birth defects,3,Rate,7.565817659972358,9.641961944608644,5.907894964775257,indirect,airpollutiondiseases4th.csv
+India,2012,Hypertensive heart disease,1,Number,162666.93043681877,236947.2597340211,99127.68029315564,direct,airpollutiondiseases3rd.csv
+India,2012,Hypertensive heart disease,3,Rate,12.81180377061712,18.66219389242626,7.807391365546551,direct,airpollutiondiseases3rd.csv
+India,2012,Interstitial lung disease and pulmonary sarcoidosis,1,Number,24920.10864557302,59458.773360887215,13092.769476450225,direct,airpollutiondiseases2nd.csv
+India,2012,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,1.96273170614447,4.683030132158075,1.031199106639307,direct,airpollutiondiseases2nd.csv
+India,2012,Ischemic heart disease,1,Number,1316075.7359023178,1469122.5559238929,1170357.686439284,direct,airpollutiondiseases3rd.csv
+India,2012,Ischemic heart disease,3,Rate,103.65538976098226,115.7095043899846,92.1784961444115,direct,airpollutiondiseases3rd.csv
+India,2012,Ischemic stroke,1,Number,309064.14830136194,418518.9608928499,230551.6012543137,direct,airpollutiondiseases3rd.csv
+India,2012,Ischemic stroke,3,Rate,24.34218934319862,32.96295557334817,18.158465684081413,direct,airpollutiondiseases3rd.csv
+India,2012,Lower respiratory infections,1,Number,498796.3452858749,551451.8391846997,446988.8222560537,strong,airpollutiondiseases1st.csv
+India,2012,Lower respiratory infections,3,Rate,39.28567951791367,43.43287682141655,35.2052692149873,strong,airpollutiondiseases1st.csv
+India,2012,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,113648.62806286648,161780.79423347765,92760.95790259172,indirect,airpollutiondiseases4th.csv
+India,2012,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,8.951075167099406,12.742010831629717,7.305942191391381,indirect,airpollutiondiseases4th.csv
+India,2012,Neonatal preterm birth,1,Number,281798.3510968824,315533.8585820791,239765.3458337423,indirect,airpollutiondiseases4th.csv
+India,2012,Neonatal preterm birth,3,Rate,22.194708951854317,24.851749942557724,18.88414906193353,indirect,airpollutiondiseases4th.csv
+India,2012,Otitis media,1,Number,92.45511425788422,290.4459992329322,26.237449490293987,strong,airpollutiondiseases1st.csv
+India,2012,Otitis media,3,Rate,0.0072818536520062,0.0228758060297846,0.0020664867370918,strong,airpollutiondiseases1st.csv
+India,2012,Pulmonary Arterial Hypertension,1,Number,3455.075503005135,5511.316498346509,2013.4326371326376,direct,airpollutiondiseases3rd.csv
+India,2012,Pulmonary Arterial Hypertension,3,Rate,0.2721250670821583,0.4340765840049196,0.1585798894897004,direct,airpollutiondiseases3rd.csv
+India,2012,Pulmonary aspiration and foreign body in airway,1,Number,4711.631669206927,7020.643886401385,2204.785876308142,direct,airpollutiondiseases2nd.csv
+India,2012,Pulmonary aspiration and foreign body in airway,3,Rate,0.3710926383328442,0.5529526596119889,0.1736510545052642,direct,airpollutiondiseases2nd.csv
+India,2012,Respiratory infections and tuberculosis,1,Number,997117.6422349162,1135025.4610159132,913524.0286318074,strong,airpollutiondiseases1st.csv
+India,2012,Respiratory infections and tuberculosis,3,Rate,78.53394377227784,89.39569611438783,71.95003042809755,strong,airpollutiondiseases1st.csv
+India,2012,Stroke,1,Number,724926.9329919836,850690.1653624167,627592.415082298,direct,airpollutiondiseases3rd.csv
+India,2012,Stroke,3,Rate,57.09594192616796,67.00117497114961,49.429781753244114,direct,airpollutiondiseases3rd.csv
+India,2012,"Tracheal, bronchus, and lung cancer",1,Number,56665.95048585336,76535.73772283849,46543.09025700173,direct,airpollutiondiseases5th.csv
+India,2012,"Tracheal, bronchus, and lung cancer",3,Rate,4.46306471850615,6.028028256949766,3.665778518409041,direct,airpollutiondiseases5th.csv
+India,2012,Tuberculosis,1,Number,496356.35543148255,611908.3873489199,432700.9532602794,strong,airpollutiondiseases1st.csv
+India,2012,Tuberculosis,3,Rate,39.09350357205404,48.194492655986544,34.079942921667694,strong,airpollutiondiseases1st.csv
+India,2012,Upper respiratory infections,1,Number,1872.4864033002611,4606.073139153556,181.78062348063125,strong,airpollutiondiseases1st.csv
+India,2012,Upper respiratory infections,3,Rate,0.1474788286581057,0.3627787470598801,0.0143172166037697,strong,airpollutiondiseases1st.csv
+India,2013,Asthma,1,Number,158489.75845405634,298967.6787074622,78421.59945706466,direct,airpollutiondiseases2nd.csv
+India,2013,Asthma,3,Rate,12.30388818421311,23.209480066036555,6.088031178535605,direct,airpollutiondiseases2nd.csv
+India,2013,Atrial fibrillation and flutter,1,Number,22269.3107907983,29583.284115811424,16784.590620094466,direct,airpollutiondiseases3rd.csv
+India,2013,Atrial fibrillation and flutter,3,Rate,1.7288127168728118,2.2966116134770096,1.3030225310571113,direct,airpollutiondiseases3rd.csv
+India,2013,Cardiovascular diseases,1,Number,2593089.9017467843,2817001.4637045814,2373392.9239552324,direct,airpollutiondiseases3rd.csv
+India,2013,Cardiovascular diseases,3,Rate,201.30693941308132,218.68965769313905,184.2514080303365,direct,airpollutiondiseases3rd.csv
+India,2013,Chronic obstructive pulmonary disease,1,Number,782343.8386526832,912898.2920445944,591749.0336408677,direct,airpollutiondiseases2nd.csv
+India,2013,Chronic obstructive pulmonary disease,3,Rate,60.73497244417261,70.87018504184205,45.938703005494176,direct,airpollutiondiseases2nd.csv
+India,2013,Chronic respiratory diseases,1,Number,980332.2495737212,1106095.5108433077,797396.0514822068,direct,airpollutiondiseases2nd.csv
+India,2013,Chronic respiratory diseases,3,Rate,76.10522282188803,85.86848525244777,61.90350689955904,direct,airpollutiondiseases2nd.csv
+India,2013,Congenital birth defects,1,Number,95482.57352888914,123580.96561255096,73861.66686617988,indirect,airpollutiondiseases4th.csv
+India,2013,Congenital birth defects,3,Rate,7.41250992934612,9.59384629912658,5.7340341677946265,indirect,airpollutiondiseases4th.csv
+India,2013,Hypertensive heart disease,1,Number,170590.37406087734,249423.833219313,106499.84100048784,direct,airpollutiondiseases3rd.csv
+India,2013,Hypertensive heart disease,3,Rate,13.243284034384915,19.36328873450753,8.26780322014518,direct,airpollutiondiseases3rd.csv
+India,2013,Interstitial lung disease and pulmonary sarcoidosis,1,Number,26061.417325116006,57296.00633023592,13737.532759308073,direct,airpollutiondiseases2nd.csv
+India,2013,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.023201800659536,4.448007632578654,1.066473118807162,direct,airpollutiondiseases2nd.csv
+India,2013,Ischemic heart disease,1,Number,1342445.279591577,1508800.3510330308,1188612.9701679235,direct,airpollutiondiseases3rd.csv
+India,2013,Ischemic heart disease,3,Rate,104.216807285422,117.13129600606564,92.2744865151082,direct,airpollutiondiseases3rd.csv
+India,2013,Ischemic stroke,1,Number,331023.3548096683,447905.6664091172,242312.57126485647,direct,airpollutiondiseases3rd.csv
+India,2013,Ischemic stroke,3,Rate,25.69802858979008,34.77184450483459,18.8112267414189,direct,airpollutiondiseases3rd.csv
+India,2013,Lower respiratory infections,1,Number,498092.1703999345,554238.8806196355,447793.1124837371,strong,airpollutiondiseases1st.csv
+India,2013,Lower respiratory infections,3,Rate,38.66792674688422,43.02671214218706,34.76310671050594,strong,airpollutiondiseases1st.csv
+India,2013,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,113702.25121536784,160604.84480025686,94616.62547516874,indirect,airpollutiondiseases4th.csv
+India,2013,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,8.826941241460343,12.468086717654328,7.34528458854025,indirect,airpollutiondiseases4th.csv
+India,2013,Neonatal preterm birth,1,Number,280688.7375611949,310856.6893559856,239908.4576665668,indirect,airpollutiondiseases4th.csv
+India,2013,Neonatal preterm birth,3,Rate,21.79044800880313,24.132448585057645,18.62459042381686,indirect,airpollutiondiseases4th.csv
+India,2013,Otitis media,1,Number,91.13473814137645,274.3326656962979,26.49447182572938,strong,airpollutiondiseases1st.csv
+India,2013,Otitis media,3,Rate,0.0070749784637604,0.0212970129863806,0.0020568207184065,strong,airpollutiondiseases1st.csv
+India,2013,Pulmonary Arterial Hypertension,1,Number,3516.328811611502,5857.291483754471,1985.1273679053184,direct,airpollutiondiseases3rd.csv
+India,2013,Pulmonary Arterial Hypertension,3,Rate,0.2729798880319237,0.4547136684503812,0.1541095488085351,direct,airpollutiondiseases3rd.csv
+India,2013,Pulmonary aspiration and foreign body in airway,1,Number,4818.592833235277,7186.552692054936,2269.3940061722788,direct,airpollutiondiseases2nd.csv
+India,2013,Pulmonary aspiration and foreign body in airway,3,Rate,0.3740773410451252,0.5579069689770019,0.17617775665903,direct,airpollutiondiseases2nd.csv
+India,2013,Respiratory infections and tuberculosis,1,Number,983478.0425492636,1115746.3236491757,901702.2547796568,strong,airpollutiondiseases1st.csv
+India,2013,Respiratory infections and tuberculosis,3,Rate,76.3494372455789,86.61769783759152,70.00101348175032,strong,airpollutiondiseases1st.csv
+India,2013,Stroke,1,Number,770605.7883404287,896735.9878560397,661645.9605669394,direct,airpollutiondiseases3rd.csv
+India,2013,Stroke,3,Rate,59.82372328869791,69.61547189523289,51.36494620068338,direct,airpollutiondiseases3rd.csv
+India,2013,"Tracheal, bronchus, and lung cancer",1,Number,58768.313927736766,78051.36401048559,48778.87480040247,direct,airpollutiondiseases5th.csv
+India,2013,"Tracheal, bronchus, and lung cancer",3,Rate,4.562305920550804,6.059289034052739,3.7868050727698144,direct,airpollutiondiseases5th.csv
+India,2013,Tuberculosis,1,Number,483455.188995837,584012.894267584,421003.9127945436,strong,airpollutiondiseases1st.csv
+India,2013,Tuberculosis,3,Rate,37.53162756700608,45.3381304842485,32.68340565767138,strong,airpollutiondiseases1st.csv
+India,2013,Upper respiratory infections,1,Number,1839.5484153504287,4647.765167206357,182.198468864732,strong,airpollutiondiseases1st.csv
+India,2013,Upper respiratory infections,3,Rate,0.1428079532248087,0.3608156355438247,0.014144444474602,strong,airpollutiondiseases1st.csv
+India,2014,Asthma,1,Number,160778.84954078257,310442.7382574127,81532.02603908478,direct,airpollutiondiseases2nd.csv
+India,2014,Asthma,3,Rate,12.308688885728818,23.766453690632854,6.241818159568796,direct,airpollutiondiseases2nd.csv
+India,2014,Atrial fibrillation and flutter,1,Number,23691.65557414041,31743.44900590528,17798.085658392814,direct,airpollutiondiseases3rd.csv
+India,2014,Atrial fibrillation and flutter,3,Rate,1.8137536030568984,2.430171873288453,1.3625616787060069,direct,airpollutiondiseases3rd.csv
+India,2014,Cardiovascular diseases,1,Number,2684013.2169399653,2910348.884682084,2453448.1631229995,direct,airpollutiondiseases3rd.csv
+India,2014,Cardiovascular diseases,3,Rate,205.4790399785651,222.80653875056504,187.8277536093686,direct,airpollutiondiseases3rd.csv
+India,2014,Chronic obstructive pulmonary disease,1,Number,799099.8553339167,930764.052268291,603169.879270598,direct,airpollutiondiseases2nd.csv
+India,2014,Chronic obstructive pulmonary disease,3,Rate,61.17640184656975,71.25617068484263,46.17666073858304,direct,airpollutiondiseases2nd.csv
+India,2014,Chronic respiratory diseases,1,Number,1000892.6555157056,1127103.0080888877,814078.8025192777,direct,airpollutiondiseases2nd.csv
+India,2014,Chronic respiratory diseases,3,Rate,76.62498108390068,86.2872219098458,62.32313974939075,direct,airpollutiondiseases2nd.csv
+India,2014,Congenital birth defects,1,Number,94046.49549788175,122707.4328962873,72105.2737768467,indirect,airpollutiondiseases4th.csv
+India,2014,Congenital birth defects,3,Rate,7.199883922436536,9.394069056973397,5.520137657872602,indirect,airpollutiondiseases4th.csv
+India,2014,Hypertensive heart disease,1,Number,176926.82236009146,257688.9745905614,111234.95872228094,direct,airpollutiondiseases3rd.csv
+India,2014,Hypertensive heart disease,3,Rate,13.544923465934968,19.72780267166391,8.515774954479623,direct,airpollutiondiseases3rd.csv
+India,2014,Interstitial lung disease and pulmonary sarcoidosis,1,Number,27271.73338471368,59053.92362181499,14651.386862376216,direct,airpollutiondiseases2nd.csv
+India,2014,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.0878323396749874,4.520970111545275,1.1216609843180847,direct,airpollutiondiseases2nd.csv
+India,2014,Ischemic heart disease,1,Number,1377296.5738396393,1541997.5481235676,1213357.7235062134,direct,airpollutiondiseases3rd.csv
+India,2014,Ischemic heart disease,3,Rate,105.44120124750732,118.0501548345466,92.89059331119196,direct,airpollutiondiseases3rd.csv
+India,2014,Ischemic stroke,1,Number,351909.1892318677,487324.8936631974,252349.4845396908,direct,airpollutiondiseases3rd.csv
+India,2014,Ischemic stroke,3,Rate,26.94098594843727,37.307957604521,19.31902924137549,direct,airpollutiondiseases3rd.csv
+India,2014,Lower respiratory infections,1,Number,493066.5329014551,552613.3201010809,441921.47129986144,strong,airpollutiondiseases1st.csv
+India,2014,Lower respiratory infections,3,Rate,37.74751822632959,42.30622031854085,33.83202403605815,strong,airpollutiondiseases1st.csv
+India,2014,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,112437.20845354527,153220.39301712814,96057.16842670628,indirect,airpollutiondiseases4th.csv
+India,2014,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,8.607815157201253,11.730038832741778,7.353814290781285,indirect,airpollutiondiseases4th.csv
+India,2014,Neonatal preterm birth,1,Number,277525.6555771223,307100.32992711,240478.6860392001,indirect,airpollutiondiseases4th.csv
+India,2014,Neonatal preterm birth,3,Rate,21.246432363855465,23.510570131419257,18.41024076586987,indirect,airpollutiondiseases4th.csv
+India,2014,Otitis media,1,Number,89.31478727210126,266.6171919338543,25.692401335998674,strong,airpollutiondiseases1st.csv
+India,2014,Otitis media,3,Rate,0.0068376402279734,0.020411317013859,0.0019669239808304,strong,airpollutiondiseases1st.csv
+India,2014,Pulmonary Arterial Hypertension,1,Number,3562.595464046062,5942.271035045873,2032.1975522703267,direct,airpollutiondiseases3rd.csv
+India,2014,Pulmonary Arterial Hypertension,3,Rate,0.2727403468671331,0.4549203185242634,0.1555782212441457,direct,airpollutiondiseases3rd.csv
+India,2014,Pulmonary aspiration and foreign body in airway,1,Number,4941.956144385162,7584.597832538971,2322.8455615027287,direct,airpollutiondiseases2nd.csv
+India,2014,Pulmonary aspiration and foreign body in airway,3,Rate,0.3783395691777435,0.5806513438225274,0.1778292569439043,direct,airpollutiondiseases2nd.csv
+India,2014,Respiratory infections and tuberculosis,1,Number,962258.978275387,1091068.996380936,879312.1279308602,strong,airpollutiondiseases1st.csv
+India,2014,Respiratory infections and tuberculosis,3,Rate,73.66731647178925,83.52857896219002,67.31718411384558,strong,airpollutiondiseases1st.csv
+India,2014,Stroke,1,Number,813397.00945112,936169.66647357,700350.8469134913,direct,airpollutiondiseases3rd.csv
+India,2014,Stroke,3,Rate,62.270943961298194,71.67000635837242,53.61650932405906,direct,airpollutiondiseases3rd.csv
+India,2014,"Tracheal, bronchus, and lung cancer",1,Number,61142.26468310043,80234.49160658562,50550.6991915664,direct,airpollutiondiseases5th.csv
+India,2014,"Tracheal, bronchus, and lung cancer",3,Rate,4.680846491330753,6.142483280050942,3.869991799805896,direct,airpollutiondiseases5th.csv
+India,2014,Tuberculosis,1,Number,467320.85450663214,561638.4387035291,404238.4217338436,strong,airpollutiondiseases1st.csv
+India,2014,Tuberculosis,3,Rate,35.77651553275997,42.99715309577882,30.947136286839875,strong,airpollutiondiseases1st.csv
+India,2014,Upper respiratory infections,1,Number,1782.2760800268484,4428.5615828453065,178.37615938549442,strong,airpollutiondiseases1st.csv
+India,2014,Upper respiratory infections,3,Rate,0.136445072471813,0.3390358053327587,0.0136558798422693,strong,airpollutiondiseases1st.csv
+India,2015,Asthma,1,Number,157701.0820242795,302625.4462409688,82819.3988214375,direct,airpollutiondiseases2nd.csv
+India,2015,Asthma,3,Rate,11.911250818576498,22.85746900395301,6.255395456665185,direct,airpollutiondiseases2nd.csv
+India,2015,Atrial fibrillation and flutter,1,Number,26022.153663118155,34585.38936692102,19666.85902858011,direct,airpollutiondiseases3rd.csv
+India,2015,Atrial fibrillation and flutter,3,Rate,1.965467802390976,2.612253778601856,1.4854488485179682,direct,airpollutiondiseases3rd.csv
+India,2015,Cardiovascular diseases,1,Number,2764634.1222625426,3002940.88827117,2556895.59568062,direct,airpollutiondiseases3rd.csv
+India,2015,Cardiovascular diseases,3,Rate,208.8143596046752,226.81380276166985,193.12375264728053,direct,airpollutiondiseases3rd.csv
+India,2015,Chronic obstructive pulmonary disease,1,Number,801636.0989953239,929458.1984281124,605990.8155867258,direct,airpollutiondiseases2nd.csv
+India,2015,Chronic obstructive pulmonary disease,3,Rate,60.5480223584544,70.20249693121964,45.77082481333857,direct,airpollutiondiseases2nd.csv
+India,2015,Chronic respiratory diseases,1,Number,1001485.7174416628,1118661.8728525992,820225.3101064999,direct,airpollutiondiseases2nd.csv
+India,2015,Chronic respiratory diseases,3,Rate,75.64277567755127,84.49315615142324,61.95207585778677,direct,airpollutiondiseases2nd.csv
+India,2015,Congenital birth defects,1,Number,91979.98044359422,121392.42592029444,70893.81374605201,indirect,airpollutiondiseases4th.csv
+India,2015,Congenital birth defects,3,Rate,6.947299303772286,9.16883774069147,5.35464935417922,indirect,airpollutiondiseases4th.csv
+India,2015,Hypertensive heart disease,1,Number,188522.58982890449,273815.40898773755,119875.38028762989,direct,airpollutiondiseases3rd.csv
+India,2015,Hypertensive heart disease,3,Rate,14.239216520239092,20.681430796663243,9.0542544366206,direct,airpollutiondiseases3rd.csv
+India,2015,Interstitial lung disease and pulmonary sarcoidosis,1,Number,28224.4194025524,58475.39994571628,15388.139821500436,direct,airpollutiondiseases2nd.csv
+India,2015,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.1318061638964503,4.416679622799081,1.162274796675126,direct,airpollutiondiseases2nd.csv
+India,2015,Ischemic heart disease,1,Number,1386326.818493111,1567840.6375684154,1224202.1005388484,direct,airpollutiondiseases3rd.csv
+India,2015,Ischemic heart disease,3,Rate,104.71003901576483,118.41987916582036,92.46466850431275,direct,airpollutiondiseases3rd.csv
+India,2015,Ischemic stroke,1,Number,372238.3471386102,516375.3010820596,267611.1561298096,direct,airpollutiondiseases3rd.csv
+India,2015,Ischemic stroke,3,Rate,28.115370295162037,39.00211494274605,20.21282011255093,direct,airpollutiondiseases3rd.csv
+India,2015,Lower respiratory infections,1,Number,483951.3421803033,541770.4038686279,427215.07060769503,strong,airpollutiondiseases1st.csv
+India,2015,Lower respiratory infections,3,Rate,36.55311521457313,40.9202212421548,32.26779292928809,strong,airpollutiondiseases1st.csv
+India,2015,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,108857.76280102208,146520.5677331152,92092.08033557824,indirect,airpollutiondiseases4th.csv
+India,2015,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,8.222087633314098,11.066780328626198,6.955766271233872,indirect,airpollutiondiseases4th.csv
+India,2015,Neonatal preterm birth,1,Number,271059.1655929661,300974.0780517229,237800.3348976359,indirect,airpollutiondiseases4th.csv
+India,2015,Neonatal preterm birth,3,Rate,20.47325019339311,22.732740242149728,17.96119213228445,indirect,airpollutiondiseases4th.csv
+India,2015,Otitis media,1,Number,87.399769668124,250.6976789200043,26.377037178005043,strong,airpollutiondiseases1st.csv
+India,2015,Otitis media,3,Rate,0.0066013534253529,0.0189353357308695,0.0019922723525115,strong,airpollutiondiseases1st.csv
+India,2015,Pulmonary Arterial Hypertension,1,Number,3633.04030043898,6046.3029425189625,2093.262181288567,direct,airpollutiondiseases3rd.csv
+India,2015,Pulmonary Arterial Hypertension,3,Rate,0.2744055633420624,0.4566806387691909,0.1581052618683362,direct,airpollutiondiseases3rd.csv
+India,2015,Pulmonary aspiration and foreign body in airway,1,Number,5044.484264831742,7849.332744218093,2399.0588630609577,direct,airpollutiondiseases2nd.csv
+India,2015,Pulmonary aspiration and foreign body in airway,3,Rate,0.3810127144182984,0.592864486880646,0.1812022560634591,direct,airpollutiondiseases2nd.csv
+India,2015,Respiratory infections and tuberculosis,1,Number,947022.9405073558,1070198.149684861,864657.0593669899,strong,airpollutiondiseases1st.csv
+India,2015,Respiratory infections and tuberculosis,3,Rate,71.52917171229227,80.83266406828005,65.30803069941757,strong,airpollutiondiseases1st.csv
+India,2015,Stroke,1,Number,861566.3232275912,989202.0887937832,750334.8308148243,direct,airpollutiondiseases3rd.csv
+India,2015,Stroke,3,Rate,65.07458567229496,74.71498634402839,56.673208915418506,direct,airpollutiondiseases3rd.csv
+India,2015,"Tracheal, bronchus, and lung cancer",1,Number,64348.17379284818,83049.10707389117,53575.98173680658,direct,airpollutiondiseases5th.csv
+India,2015,"Tracheal, bronchus, and lung cancer",3,Rate,4.86025351205873,6.272745449290165,4.046623828619815,direct,airpollutiondiseases5th.csv
+India,2015,Tuberculosis,1,Number,461324.99824894295,553031.4837749798,401368.2263728085,strong,airpollutiondiseases1st.csv
+India,2015,Tuberculosis,3,Rate,34.844134818152575,41.77077689802493,30.31556634594092,strong,airpollutiondiseases1st.csv
+India,2015,Upper respiratory infections,1,Number,1659.2003084407904,4099.922513735534,183.7835320044294,strong,airpollutiondiseases1st.csv
+India,2015,Upper respiratory infections,3,Rate,0.1253203261411677,0.309669437717073,0.0138812728354749,strong,airpollutiondiseases1st.csv
+India,2016,Asthma,1,Number,160276.74347373992,305100.7070862471,85127.69207806673,direct,airpollutiondiseases2nd.csv
+India,2016,Asthma,3,Rate,11.949540493795816,22.74698858359436,6.3467523833044766,direct,airpollutiondiseases2nd.csv
+India,2016,Atrial fibrillation and flutter,1,Number,27880.568842125034,37090.49219840459,21010.66557277131,direct,airpollutiondiseases3rd.csv
+India,2016,Atrial fibrillation and flutter,3,Rate,2.0786545767547424,2.765306611887022,1.5664643142975252,direct,airpollutiondiseases3rd.csv
+India,2016,Cardiovascular diseases,1,Number,2933370.290464192,3173787.431775058,2722456.63691546,direct,airpollutiondiseases3rd.csv
+India,2016,Cardiovascular diseases,3,Rate,218.69939649068587,236.62385828864825,202.97458708196527,direct,airpollutiondiseases3rd.csv
+India,2016,Chronic obstructive pulmonary disease,1,Number,816538.089048398,946758.2512269224,618380.5284214357,direct,airpollutiondiseases2nd.csv
+India,2016,Chronic obstructive pulmonary disease,3,Rate,60.87754685013998,70.58619869404205,46.103776535474,direct,airpollutiondiseases2nd.csv
+India,2016,Chronic respiratory diseases,1,Number,1020765.099283852,1149051.070057416,827144.7974873998,direct,airpollutiondiseases2nd.csv
+India,2016,Chronic respiratory diseases,3,Rate,76.1038290657832,85.66827596756202,61.66833713730672,direct,airpollutiondiseases2nd.csv
+India,2016,Congenital birth defects,1,Number,91813.11204123514,117294.62440050273,71277.70107933495,indirect,airpollutiondiseases4th.csv
+India,2016,Congenital birth defects,3,Rate,6.845188368691222,8.744979674534134,5.314156981806511,indirect,airpollutiondiseases4th.csv
+India,2016,Hypertensive heart disease,1,Number,199235.07061,289066.8465618461,125992.3106144056,direct,airpollutiondiseases3rd.csv
+India,2016,Hypertensive heart disease,3,Rate,14.854104796735731,21.55157331962254,9.39344152472384,direct,airpollutiondiseases3rd.csv
+India,2016,Interstitial lung disease and pulmonary sarcoidosis,1,Number,29744.91344916886,57246.35311145367,16242.47415697655,direct,airpollutiondiseases2nd.csv
+India,2016,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.2176520438445944,4.268040389400153,1.210968593768711,direct,airpollutiondiseases2nd.csv
+India,2016,Ischemic heart disease,1,Number,1456811.8388324506,1655325.9093758978,1288525.8531763433,direct,airpollutiondiseases3rd.csv
+India,2016,Ischemic heart disease,3,Rate,108.61358724088194,123.41393739234243,96.06691230506708,direct,airpollutiondiseases3rd.csv
+India,2016,Ischemic stroke,1,Number,407364.133164436,571596.4133356822,292842.2716451692,direct,airpollutiondiseases3rd.csv
+India,2016,Ischemic stroke,3,Rate,30.37130714953665,42.61575534433213,21.833052677991542,direct,airpollutiondiseases3rd.csv
+India,2016,Lower respiratory infections,1,Number,478433.2275850404,538653.4795822976,425509.2840040205,strong,airpollutiondiseases1st.csv
+India,2016,Lower respiratory infections,3,Rate,35.66991132148602,40.15967274408265,31.724131084090704,strong,airpollutiondiseases1st.csv
+India,2016,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,106838.42383780082,139410.9350607677,89941.12975941096,indirect,airpollutiondiseases4th.csv
+India,2016,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,7.965410603393577,10.393876102552118,6.705621469617112,indirect,airpollutiondiseases4th.csv
+India,2016,Neonatal preterm birth,1,Number,261742.23851921747,292147.63679334027,229318.27195508752,indirect,airpollutiondiseases4th.csv
+India,2016,Neonatal preterm birth,3,Rate,19.51436877449785,21.78126370904677,17.096978122365993,indirect,airpollutiondiseases4th.csv
+India,2016,Otitis media,1,Number,85.97087885831398,245.48185320405264,24.241321939843917,strong,airpollutiondiseases1st.csv
+India,2016,Otitis media,3,Rate,0.0064096167412644,0.0183020648022741,0.0018073280743364,strong,airpollutiondiseases1st.csv
+India,2016,Pulmonary Arterial Hypertension,1,Number,3715.398339050984,6349.723381045012,2136.7418198820983,direct,airpollutiondiseases3rd.csv
+India,2016,Pulmonary Arterial Hypertension,3,Rate,0.2770040240451078,0.4734079007453201,0.1593062246466935,direct,airpollutiondiseases3rd.csv
+India,2016,Pulmonary aspiration and foreign body in airway,1,Number,5267.279369783444,8428.994784514089,2509.380111253071,direct,airpollutiondiseases2nd.csv
+India,2016,Pulmonary aspiration and foreign body in airway,3,Rate,0.3927055588802565,0.6284293798123457,0.1870885232869568,direct,airpollutiondiseases2nd.csv
+India,2016,Respiratory infections and tuberculosis,1,Number,933801.1396841436,1045901.9071541104,851980.08686369,strong,airpollutiondiseases1st.csv
+India,2016,Respiratory infections and tuberculosis,3,Rate,69.62017252139003,77.97792069642354,63.51994885367368,strong,airpollutiondiseases1st.csv
+India,2016,Stroke,1,Number,936844.8431579456,1084107.2817447856,813906.0749260248,direct,airpollutiondiseases3rd.csv
+India,2016,Stroke,3,Rate,69.847097882631,80.82634811550638,60.68131526560768,direct,airpollutiondiseases3rd.csv
+India,2016,"Tracheal, bronchus, and lung cancer",1,Number,70377.62484204648,89538.31566125384,59196.56667142641,direct,airpollutiondiseases5th.csv
+India,2016,"Tracheal, bronchus, and lung cancer",3,Rate,5.247051192083854,6.675589393390227,4.413439874074997,direct,airpollutiondiseases5th.csv
+India,2016,Tuberculosis,1,Number,453675.3453735469,543339.5782270053,393273.167928202,strong,airpollutiondiseases1st.csv
+India,2016,Tuberculosis,3,Rate,33.82407074839416,40.50904798280549,29.32074575155924,strong,airpollutiondiseases1st.csv
+India,2016,Upper respiratory infections,1,Number,1606.5958466979823,3857.206778548004,187.8181602076621,strong,airpollutiondiseases1st.csv
+India,2016,Upper respiratory infections,3,Rate,0.1197808347686271,0.2875766477046924,0.0140029093568363,strong,airpollutiondiseases1st.csv
+India,2017,Asthma,1,Number,158155.60512483647,290863.058299918,89853.39566886696,direct,airpollutiondiseases2nd.csv
+India,2017,Asthma,3,Rate,11.645581709277328,21.417321940429023,6.616237598989094,direct,airpollutiondiseases2nd.csv
+India,2017,Atrial fibrillation and flutter,1,Number,29298.562417179237,39120.10102505741,22013.04994922858,direct,airpollutiondiseases3rd.csv
+India,2017,Atrial fibrillation and flutter,3,Rate,2.157361431005277,2.880557616676886,1.6209022225408751,direct,airpollutiondiseases3rd.csv
+India,2017,Cardiovascular diseases,1,Number,2980929.94877395,3219607.3610338056,2748629.6802818705,direct,airpollutiondiseases3rd.csv
+India,2017,Cardiovascular diseases,3,Rate,219.49688890683157,237.07158886411105,202.3917616135164,direct,airpollutiondiseases3rd.csv
+India,2017,Chronic obstructive pulmonary disease,1,Number,837875.2731705207,960239.2519337672,632279.0410284754,direct,airpollutiondiseases2nd.csv
+India,2017,Chronic obstructive pulmonary disease,3,Rate,61.69585294298276,70.70596492627205,46.55704253762365,direct,airpollutiondiseases2nd.csv
+India,2017,Chronic respiratory diseases,1,Number,1041923.931246818,1169225.1211760126,840638.7268830463,direct,airpollutiondiseases2nd.csv
+India,2017,Chronic respiratory diseases,3,Rate,76.72070975043047,86.09436683857784,61.8993362528763,direct,airpollutiondiseases2nd.csv
+India,2017,Congenital birth defects,1,Number,92965.80550255174,118108.5358142494,71654.15980216654,indirect,airpollutiondiseases4th.csv
+India,2017,Congenital birth defects,3,Rate,6.845415837738992,8.69676799189175,5.276160602256796,indirect,airpollutiondiseases4th.csv
+India,2017,Hypertensive heart disease,1,Number,207773.9754445473,305185.50710599625,127893.68220138011,direct,airpollutiondiseases3rd.csv
+India,2017,Hypertensive heart disease,3,Rate,15.299165693122053,22.47193677824316,9.417284483853091,direct,airpollutiondiseases3rd.csv
+India,2017,Interstitial lung disease and pulmonary sarcoidosis,1,Number,31435.263145715395,61542.39001027632,17131.695471274797,direct,airpollutiondiseases2nd.csv
+India,2017,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.3146946023639465,4.531593621883823,1.2614700520522777,direct,airpollutiondiseases2nd.csv
+India,2017,Ischemic heart disease,1,Number,1442114.0203893124,1640214.4606885102,1291973.0005812307,direct,airpollutiondiseases3rd.csv
+India,2017,Ischemic heart disease,3,Rate,106.18818501742015,120.7750525668006,95.1327468449372,direct,airpollutiondiseases3rd.csv
+India,2017,Ischemic stroke,1,Number,422586.80672754126,578917.6877281556,309411.18558907195,direct,airpollutiondiseases3rd.csv
+India,2017,Ischemic stroke,3,Rate,31.116628355496307,42.62784888377886,22.78308910201284,direct,airpollutiondiseases3rd.csv
+India,2017,Lower respiratory infections,1,Number,478066.5415382003,545077.61688192,424776.9603458872,strong,airpollutiondiseases1st.csv
+India,2017,Lower respiratory infections,3,Rate,35.20180626896065,40.1360794028521,31.27789746068033,strong,airpollutiondiseases1st.csv
+India,2017,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,105068.49726041195,133451.42105569984,88149.08724923576,indirect,airpollutiondiseases4th.csv
+India,2017,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,7.736581760420695,9.826521335722608,6.49074307134995,indirect,airpollutiondiseases4th.csv
+India,2017,Neonatal preterm birth,1,Number,250961.9983451591,280192.04048976407,222128.1933297887,indirect,airpollutiondiseases4th.csv
+India,2017,Neonatal preterm birth,3,Rate,18.4792594315275,20.63157546162916,16.356119805645612,indirect,airpollutiondiseases4th.csv
+India,2017,Otitis media,1,Number,85.29968421278255,235.64907573460653,24.36721586457252,strong,airpollutiondiseases1st.csv
+India,2017,Otitis media,3,Rate,0.0062809309950881,0.0173517123469441,0.0017942481593016,strong,airpollutiondiseases1st.csv
+India,2017,Pulmonary Arterial Hypertension,1,Number,3736.1362321519177,6170.99678418757,2160.7489674884714,direct,airpollutiondiseases3rd.csv
+India,2017,Pulmonary Arterial Hypertension,3,Rate,0.2751055186072823,0.4543932996950636,0.1591039320690634,direct,airpollutiondiseases3rd.csv
+India,2017,Pulmonary aspiration and foreign body in airway,1,Number,5424.969836162456,8743.080997758814,2553.215915546384,direct,airpollutiondiseases2nd.csv
+India,2017,Pulmonary aspiration and foreign body in airway,3,Rate,0.3994605783811927,0.6437853661263683,0.1880027239151791,direct,airpollutiondiseases2nd.csv
+India,2017,Respiratory infections and tuberculosis,1,Number,929664.1027574372,1047135.203716869,848560.7707937766,strong,airpollutiondiseases1st.csv
+India,2017,Respiratory infections and tuberculosis,3,Rate,68.45460369424205,77.10443500197232,62.48266562393509,strong,airpollutiondiseases1st.csv
+India,2017,Stroke,1,Number,982853.4858194503,1122589.2705321223,857909.5518715602,direct,airpollutiondiseases3rd.csv
+India,2017,Stroke,3,Rate,72.3711345438809,82.66039680111764,63.17105092547113,direct,airpollutiondiseases3rd.csv
+India,2017,"Tracheal, bronchus, and lung cancer",1,Number,74706.14519508187,94778.61192709285,63299.52200332428,direct,airpollutiondiseases5th.csv
+India,2017,"Tracheal, bronchus, and lung cancer",3,Rate,5.50088956611908,6.978899474461401,4.660977744456484,direct,airpollutiondiseases5th.csv
+India,2017,Tuberculosis,1,Number,450021.5479063544,538996.1589780404,390221.97510162526,strong,airpollutiondiseases1st.csv
+India,2017,Tuberculosis,3,Rate,33.13674974049912,39.68827918182764,28.73348619048039,strong,airpollutiondiseases1st.csv
+India,2017,Upper respiratory infections,1,Number,1490.7136286697869,3391.462632702409,192.8168189230303,strong,airpollutiondiseases1st.csv
+India,2017,Upper respiratory infections,3,Rate,0.1097667537872236,0.2497259276515795,0.0141978149804976,strong,airpollutiondiseases1st.csv
+India,2018,Asthma,1,Number,161426.38011516415,301006.62681212986,92083.01582197576,direct,airpollutiondiseases2nd.csv
+India,2018,Asthma,3,Rate,11.74590646453416,21.90221747658509,6.700258594942888,direct,airpollutiondiseases2nd.csv
+India,2018,Atrial fibrillation and flutter,1,Number,30325.74128651295,40118.86998199343,22497.335037557677,direct,airpollutiondiseases3rd.csv
+India,2018,Atrial fibrillation and flutter,3,Rate,2.206599196270907,2.9191789714612764,1.6369789923054594,direct,airpollutiondiseases3rd.csv
+India,2018,Cardiovascular diseases,1,Number,3027079.599286868,3275836.1615963355,2776418.680168801,direct,airpollutiondiseases3rd.csv
+India,2018,Cardiovascular diseases,3,Rate,220.2601198673784,238.36045335216323,202.021219210779,direct,airpollutiondiseases3rd.csv
+India,2018,Chronic obstructive pulmonary disease,1,Number,862580.6554777289,996041.0530941824,662451.2304261759,direct,airpollutiondiseases2nd.csv
+India,2018,Chronic obstructive pulmonary disease,3,Rate,62.76416339219019,72.47517435585078,48.20209797401312,direct,airpollutiondiseases2nd.csv
+India,2018,Chronic respiratory diseases,1,Number,1072438.3512190976,1203978.7220640928,867469.1520604198,direct,airpollutiondiseases2nd.csv
+India,2018,Chronic respiratory diseases,3,Rate,78.0340893069152,87.60539290148982,63.11986624305954,direct,airpollutiondiseases2nd.csv
+India,2018,Congenital birth defects,1,Number,94654.78791177543,118495.75855874048,73493.3218563325,indirect,airpollutiondiseases4th.csv
+India,2018,Congenital birth defects,3,Rate,6.887389065150642,8.622135337991397,5.347612228413548,indirect,airpollutiondiseases4th.csv
+India,2018,Hypertensive heart disease,1,Number,211750.2374505768,311105.15051824163,132293.5400526966,direct,airpollutiondiseases3rd.csv
+India,2018,Hypertensive heart disease,3,Rate,15.407633381625535,22.6370187822778,9.626106626516032,direct,airpollutiondiseases3rd.csv
+India,2018,Interstitial lung disease and pulmonary sarcoidosis,1,Number,33628.16806027442,63242.52917572293,18608.538422756643,direct,airpollutiondiseases2nd.csv
+India,2018,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.4468944687220464,4.601731338760488,1.3540175502879717,direct,airpollutiondiseases2nd.csv
+India,2018,Ischemic heart disease,1,Number,1444348.42621946,1635760.652581239,1306025.3945480783,direct,airpollutiondiseases3rd.csv
+India,2018,Ischemic heart disease,3,Rate,105.09547141221684,119.02324520860452,95.0306394390057,direct,airpollutiondiseases3rd.csv
+India,2018,Ischemic stroke,1,Number,440899.588062772,608284.2934050143,324682.1872473347,direct,airpollutiondiseases3rd.csv
+India,2018,Ischemic stroke,3,Rate,32.081282612806824,44.26073612679228,23.62492796646256,direct,airpollutiondiseases3rd.csv
+India,2018,Lower respiratory infections,1,Number,469535.90010064206,530920.7946704869,416759.6831332389,strong,airpollutiondiseases1st.csv
+India,2018,Lower respiratory infections,3,Rate,34.16495346292484,38.63151728872764,30.32478491297141,strong,airpollutiondiseases1st.csv
+India,2018,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,104056.97973215826,128050.42006229692,87741.74871483367,indirect,airpollutiondiseases4th.csv
+India,2018,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,7.571523006610743,9.317363467625436,6.384373933825719,indirect,airpollutiondiseases4th.csv
+India,2018,Neonatal preterm birth,1,Number,236725.1816676294,265839.703090391,211492.01282272427,indirect,airpollutiondiseases4th.csv
+India,2018,Neonatal preterm birth,3,Rate,17.22489124568202,19.34335816011982,15.388844121013769,indirect,airpollutiondiseases4th.csv
+India,2018,Otitis media,1,Number,83.26015207078171,240.16985119280972,23.65266731699969,strong,airpollutiondiseases1st.csv
+India,2018,Otitis media,3,Rate,0.0060582784409127,0.0174755365616157,0.0017210447124194,strong,airpollutiondiseases1st.csv
+India,2018,Pulmonary Arterial Hypertension,1,Number,3718.5992433752895,6127.658262881265,2106.77469225054,direct,airpollutiondiseases3rd.csv
+India,2018,Pulmonary Arterial Hypertension,3,Rate,0.2705773298057781,0.4458682698025263,0.1532957528959541,direct,airpollutiondiseases3rd.csv
+India,2018,Pulmonary aspiration and foreign body in airway,1,Number,5588.516594586572,9009.422265434105,2654.7243001119127,direct,airpollutiondiseases2nd.csv
+India,2018,Pulmonary aspiration and foreign body in airway,3,Rate,0.4066385751119526,0.6555547560057037,0.1931663418085358,direct,airpollutiondiseases2nd.csv
+India,2018,Respiratory infections and tuberculosis,1,Number,901148.428883734,1007548.7185124152,822628.45936588,strong,airpollutiondiseases1st.csv
+India,2018,Respiratory infections and tuberculosis,3,Rate,65.57047955098093,73.3125093783625,59.8571121515707,strong,airpollutiondiseases1st.csv
+India,2018,Stroke,1,Number,1020942.5922885956,1172468.3032765058,882512.1366607795,direct,airpollutiondiseases3rd.csv
+India,2018,Stroke,3,Rate,74.28709103261602,85.3125927316957,64.21444254426382,direct,airpollutiondiseases3rd.csv
+India,2018,"Tracheal, bronchus, and lung cancer",1,Number,78714.24144730912,98049.72669428914,66647.00031038484,direct,airpollutiondiseases5th.csv
+India,2018,"Tracheal, bronchus, and lung cancer",3,Rate,5.72750325446961,7.134415811112341,4.8494516895508415,direct,airpollutiondiseases5th.csv
+India,2018,Tuberculosis,1,Number,430080.5899877168,508035.4276575072,369051.2825252269,strong,airpollutiondiseases1st.csv
+India,2018,Tuberculosis,3,Rate,31.294057257577297,36.96630383260466,26.85336710186488,strong,airpollutiondiseases1st.csv
+India,2018,Upper respiratory infections,1,Number,1448.678643303959,3412.535640361774,203.5183153769122,strong,airpollutiondiseases1st.csv
+India,2018,Upper respiratory infections,3,Rate,0.1054105520378828,0.2483071503553662,0.0148086520587982,strong,airpollutiondiseases1st.csv
+India,2019,Asthma,1,Number,157561.3031670471,279136.1995667479,90823.58604064236,direct,airpollutiondiseases2nd.csv
+India,2019,Asthma,3,Rate,11.335421652174864,20.08187579611538,6.534114805091197,direct,airpollutiondiseases2nd.csv
+India,2019,Atrial fibrillation and flutter,1,Number,30717.564010781534,40080.88532426896,22344.18037777926,direct,airpollutiondiseases3rd.csv
+India,2019,Atrial fibrillation and flutter,3,Rate,2.209911527710084,2.8835362884842994,1.607505783230612,direct,airpollutiondiseases3rd.csv
+India,2019,Cardiovascular diseases,1,Number,2893759.55922734,3146717.237826466,2667327.786917687,direct,airpollutiondiseases3rd.csv
+India,2019,Cardiovascular diseases,3,Rate,208.18553860954543,226.38405492948505,191.89537368333944,direct,airpollutiondiseases3rd.csv
+India,2019,Chronic obstructive pulmonary disease,1,Number,874480.8207862959,1007542.9172872808,682026.8159101951,direct,airpollutiondiseases2nd.csv
+India,2019,Chronic obstructive pulmonary disease,3,Rate,62.91271163099767,72.48558859661863,49.067006815980776,direct,airpollutiondiseases2nd.csv
+India,2019,Chronic respiratory diseases,1,Number,1082444.9062679317,1220727.918505686,877512.6142768486,direct,airpollutiondiseases2nd.csv
+India,2019,Chronic respiratory diseases,3,Rate,77.87425707432276,87.82274201028397,63.13082773493279,direct,airpollutiondiseases2nd.csv
+India,2019,Congenital birth defects,1,Number,97179.84108962776,120921.7854508801,74792.1339867485,indirect,airpollutiondiseases4th.csv
+India,2019,Congenital birth defects,3,Rate,6.991402410999271,8.699467429298489,5.380765187673728,indirect,airpollutiondiseases4th.csv
+India,2019,Hypertensive heart disease,1,Number,210424.14023720357,306193.1856643257,131638.38050623029,direct,airpollutiondiseases3rd.csv
+India,2019,Hypertensive heart disease,3,Rate,15.138528988023351,22.028434626794205,9.470450666846457,direct,airpollutiondiseases3rd.csv
+India,2019,Interstitial lung disease and pulmonary sarcoidosis,1,Number,35319.043078516755,61585.79997144544,20029.72174890921,direct,airpollutiondiseases2nd.csv
+India,2019,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.5409554097293583,4.430662836817896,1.44099685034281,direct,airpollutiondiseases2nd.csv
+India,2019,Ischemic heart disease,1,Number,1348461.0056538808,1530359.372929044,1216803.503207727,direct,airpollutiondiseases3rd.csv
+India,2019,Ischemic heart disease,3,Rate,97.01223443421824,110.0985357624074,87.5404080790049,direct,airpollutiondiseases3rd.csv
+India,2019,Ischemic stroke,1,Number,422151.1299305825,564750.9233228569,311564.5842246058,direct,airpollutiondiseases3rd.csv
+India,2019,Ischemic stroke,3,Rate,30.37078878201369,40.62983559822788,22.414868772227155,direct,airpollutiondiseases3rd.csv
+India,2019,Lower respiratory infections,1,Number,451812.0184699056,517033.53003329376,396621.6397612785,strong,airpollutiondiseases1st.csv
+India,2019,Lower respiratory infections,3,Rate,32.5046799812692,37.19690655913255,28.534122482501665,strong,airpollutiondiseases1st.csv
+India,2019,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,102570.96208386384,121625.35744705956,87226.07938624929,indirect,airpollutiondiseases4th.csv
+India,2019,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,7.379255446098681,8.750084459489594,6.275299639156603,indirect,airpollutiondiseases4th.csv
+India,2019,Neonatal preterm birth,1,Number,215668.07558570732,243289.42120384675,192480.9420932012,indirect,airpollutiondiseases4th.csv
+India,2019,Neonatal preterm birth,3,Rate,15.515793056657111,17.502953564273074,13.847642757315112,indirect,airpollutiondiseases4th.csv
+India,2019,Otitis media,1,Number,78.702924908689,222.7740229024974,24.12044922116812,strong,airpollutiondiseases1st.csv
+India,2019,Otitis media,3,Rate,0.0056621189414358,0.0160270157201848,0.0017352957665749,strong,airpollutiondiseases1st.csv
+India,2019,Pulmonary Arterial Hypertension,1,Number,3625.075199655388,5763.722715759747,2060.064489884916,direct,airpollutiondiseases3rd.csv
+India,2019,Pulmonary Arterial Hypertension,3,Rate,0.2607985278299597,0.4146590943087568,0.1482070734002529,direct,airpollutiondiseases3rd.csv
+India,2019,Pulmonary aspiration and foreign body in airway,1,Number,5757.056946495855,9243.288611004553,2775.108405610273,direct,airpollutiondiseases2nd.csv
+India,2019,Pulmonary aspiration and foreign body in airway,3,Rate,0.4141795393436508,0.6649892565777901,0.1996494270851284,direct,airpollutiondiseases2nd.csv
+India,2019,Respiratory infections and tuberculosis,1,Number,852966.3558912785,962177.0242912746,777486.9939856639,strong,airpollutiondiseases1st.csv
+India,2019,Respiratory infections and tuberculosis,3,Rate,61.36489800986144,69.22183337626497,55.93469163279084,strong,airpollutiondiseases1st.csv
+India,2019,Stroke,1,Number,990896.9645754936,1138317.3192691775,846350.9308156354,direct,airpollutiondiseases3rd.csv
+India,2019,Stroke,3,Rate,71.28803000197924,81.89388211780249,60.88896495311788,direct,airpollutiondiseases3rd.csv
+India,2019,"Tracheal, bronchus, and lung cancer",1,Number,80693.85946649598,99146.09867519623,67216.619874413,direct,airpollutiondiseases5th.csv
+India,2019,"Tracheal, bronchus, and lung cancer",3,Rate,5.805352605038487,7.132860740939432,4.835760513497589,direct,airpollutiondiseases5th.csv
+India,2019,Tuberculosis,1,Number,399728.3714763575,481325.8418942037,348537.6416444052,strong,airpollutiondiseases1st.csv
+India,2019,Tuberculosis,3,Rate,28.75762986180577,34.62799088539114,25.074818818331824,strong,airpollutiondiseases1st.csv
+India,2019,Upper respiratory infections,1,Number,1347.2630201064123,3321.6702424495343,206.8046702091308,strong,airpollutiondiseases1st.csv
+India,2019,Upper respiratory infections,3,Rate,0.0969260478449936,0.2389706865252825,0.0148781337126547,strong,airpollutiondiseases1st.csv
+India,2020,Asthma,1,Number,141302.28995414186,246950.35854906775,84307.10910335496,direct,airpollutiondiseases2nd.csv
+India,2020,Asthma,3,Rate,10.060238444586124,17.58201860554375,6.002377034574222,direct,airpollutiondiseases2nd.csv
+India,2020,Atrial fibrillation and flutter,1,Number,32373.28455284216,42082.15257954605,23576.27718817407,direct,airpollutiondiseases3rd.csv
+India,2020,Atrial fibrillation and flutter,3,Rate,2.3048668350790766,2.9961049417464096,1.6785500802970916,direct,airpollutiondiseases3rd.csv
+India,2020,Cardiovascular diseases,1,Number,2846927.0347608146,3078332.0130230226,2606097.3588637845,direct,airpollutiondiseases3rd.csv
+India,2020,Cardiovascular diseases,3,Rate,202.69144125921383,219.16668210164883,185.54519426744304,direct,airpollutiondiseases3rd.csv
+India,2020,Chronic obstructive pulmonary disease,1,Number,782771.0320553852,934168.2743796486,566123.8027652084,direct,airpollutiondiseases2nd.csv
+India,2020,Chronic obstructive pulmonary disease,3,Rate,55.73061294723285,66.50957737965061,40.30607321949422,direct,airpollutiondiseases2nd.csv
+India,2020,Chronic respiratory diseases,1,Number,972969.1947825592,1134567.3448106537,736122.5636311639,direct,airpollutiondiseases2nd.csv
+India,2020,Chronic respiratory diseases,3,Rate,69.27206984349796,80.77730392013069,52.40940197765325,direct,airpollutiondiseases2nd.csv
+India,2020,Congenital birth defects,1,Number,103829.46675320296,128945.71918728214,79691.68506151662,indirect,airpollutiondiseases4th.csv
+India,2020,Congenital birth defects,3,Rate,7.392301946772756,9.180492983190176,5.6737746715209525,indirect,airpollutiondiseases4th.csv
+India,2020,Hypertensive heart disease,1,Number,217305.26877439223,314031.5119784825,138810.27967373785,direct,airpollutiondiseases3rd.csv
+India,2020,Hypertensive heart disease,3,Rate,15.471389882249968,22.357966673029388,9.882815859040202,direct,airpollutiondiseases3rd.csv
+India,2020,Interstitial lung disease and pulmonary sarcoidosis,1,Number,34446.21032834678,58410.45380783798,19409.576169566502,direct,airpollutiondiseases2nd.csv
+India,2020,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.4524520411381823,4.158623990835823,1.3818952575897168,direct,airpollutiondiseases2nd.csv
+India,2020,Ischemic heart disease,1,Number,1302070.77239334,1470670.9948630682,1150128.722931766,direct,airpollutiondiseases3rd.csv
+India,2020,Ischemic heart disease,3,Rate,92.70297350633606,104.70673112701022,81.88522067417311,direct,airpollutiondiseases3rd.csv
+India,2020,Ischemic stroke,1,Number,406257.4232512896,523838.1138211661,305572.69490901334,direct,airpollutiondiseases3rd.csv
+India,2020,Ischemic stroke,3,Rate,28.9241352643154,37.29547718662932,21.755727907432508,direct,airpollutiondiseases3rd.csv
+India,2020,Lower respiratory infections,1,Number,364208.3648881122,436473.1201163678,309953.1300913571,strong,airpollutiondiseases1st.csv
+India,2020,Lower respiratory infections,3,Rate,25.930386517276943,31.07538925553296,22.067599869590616,strong,airpollutiondiseases1st.csv
+India,2020,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,102384.96158339577,121010.89610490082,86018.61076132982,indirect,airpollutiondiseases4th.csv
+India,2020,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,7.289458132653282,8.61556079242194,6.124230082979308,indirect,airpollutiondiseases4th.csv
+India,2020,Neonatal preterm birth,1,Number,197747.1328198266,219151.55718560537,172266.8965640767,indirect,airpollutiondiseases4th.csv
+India,2020,Neonatal preterm birth,3,Rate,14.078917677458248,15.602839285230695,12.264812241230544,indirect,airpollutiondiseases4th.csv
+India,2020,Otitis media,1,Number,70.5658863324226,191.803850125816,21.856219492209046,strong,airpollutiondiseases1st.csv
+India,2020,Otitis media,3,Rate,0.005024049099191,0.0136557763322986,0.0015560878713302,strong,airpollutiondiseases1st.csv
+India,2020,Pulmonary Arterial Hypertension,1,Number,3679.280371287565,5705.268890239779,2038.048971838936,direct,airpollutiondiseases3rd.csv
+India,2020,Pulmonary Arterial Hypertension,3,Rate,0.2619521442409102,0.4061955786061134,0.1451020972490778,direct,airpollutiondiseases3rd.csv
+India,2020,Pulmonary aspiration and foreign body in airway,1,Number,6175.672508888653,9880.787206324903,2950.183256186218,direct,airpollutiondiseases2nd.csv
+India,2020,Pulmonary aspiration and foreign body in airway,3,Rate,0.4396867029915688,0.7034781626547225,0.210042930104608,direct,airpollutiondiseases2nd.csv
+India,2020,Respiratory infections and tuberculosis,1,Number,1697359.9058555444,1856716.8633874345,1598457.0690503814,strong,airpollutiondiseases1st.csv
+India,2020,Respiratory infections and tuberculosis,3,Rate,120.84620415372478,132.19187301086,113.80466136323754,strong,airpollutiondiseases1st.csv
+India,2020,Stroke,1,Number,975569.8495935412,1120890.2593938748,822811.034610566,direct,airpollutiondiseases3rd.csv
+India,2020,Stroke,3,Rate,69.45722754702159,79.80354234440236,58.581323810854975,direct,airpollutiondiseases3rd.csv
+India,2020,"Tracheal, bronchus, and lung cancer",1,Number,84668.04883182124,103381.4185938063,69663.7245503715,direct,airpollutiondiseases5th.csv
+India,2020,"Tracheal, bronchus, and lung cancer",3,Rate,6.0280747053881445,7.360402454417376,4.959818274297988,direct,airpollutiondiseases5th.csv
+India,2020,Tuberculosis,1,Number,360969.6441790118,434185.49496793846,313303.2912089201,strong,airpollutiondiseases1st.csv
+India,2020,Tuberculosis,3,Rate,25.69980071007212,30.912518190439112,22.30611985169001,strong,airpollutiondiseases1st.csv
+India,2020,Upper respiratory infections,1,Number,1225.4756811178174,2855.384048497163,208.91254413637856,strong,airpollutiondiseases1st.csv
+India,2020,Upper respiratory infections,3,Rate,0.0872496656925231,0.203293551633677,0.0148738566711068,strong,airpollutiondiseases1st.csv
+India,2021,Asthma,1,Number,147770.45492870634,256386.8810598777,90556.15437996862,direct,airpollutiondiseases2nd.csv
+India,2021,Asthma,3,Rate,10.424246597630628,18.08643056458754,6.388149002081212,direct,airpollutiondiseases2nd.csv
+India,2021,Atrial fibrillation and flutter,1,Number,32799.1292625962,42994.173307184414,24016.80701929834,direct,airpollutiondiseases3rd.csv
+India,2021,Atrial fibrillation and flutter,3,Rate,2.3137657103770994,3.032959904140443,1.6942298714425694,direct,airpollutiondiseases3rd.csv
+India,2021,Cardiovascular diseases,1,Number,3161467.674806589,3409124.005134781,2894548.116212863,direct,airpollutiondiseases3rd.csv
+India,2021,Cardiovascular diseases,3,Rate,223.02102723119967,240.49157410101145,204.1915846213484,direct,airpollutiondiseases3rd.csv
+India,2021,Chronic obstructive pulmonary disease,1,Number,791231.6649500489,947322.1680874388,569296.5417579473,direct,airpollutiondiseases2nd.csv
+India,2021,Chronic obstructive pulmonary disease,3,Rate,55.81625904361269,66.82743104709212,40.160176412303336,direct,airpollutiondiseases2nd.csv
+India,2021,Chronic respiratory diseases,1,Number,990714.065111434,1167461.908274889,739229.4128857654,direct,airpollutiondiseases2nd.csv
+India,2021,Chronic respiratory diseases,3,Rate,69.88844777831456,82.35686105906217,52.14783764359892,direct,airpollutiondiseases2nd.csv
+India,2021,Congenital birth defects,1,Number,104420.83990445948,128247.47148442036,79958.08035553155,indirect,airpollutiondiseases4th.csv
+India,2021,Congenital birth defects,3,Rate,7.366212587089612,9.047026815483486,5.640523658815018,indirect,airpollutiondiseases4th.csv
+India,2021,Hypertensive heart disease,1,Number,227525.62230947547,328638.0054356835,146374.7666326926,direct,airpollutiondiseases3rd.csv
+India,2021,Hypertensive heart disease,3,Rate,16.050456062936526,23.18327849547368,10.325789846055404,direct,airpollutiondiseases3rd.csv
+India,2021,Interstitial lung disease and pulmonary sarcoidosis,1,Number,36507.55107760715,64610.80335500278,20217.00669330432,direct,airpollutiondiseases2nd.csv
+India,2021,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.575370802588248,4.557872866863115,1.426178618307907,direct,airpollutiondiseases2nd.csv
+India,2021,Ischemic heart disease,1,Number,1504918.092179728,1682209.9289156862,1334274.2203823389,direct,airpollutiondiseases3rd.csv
+India,2021,Ischemic heart disease,3,Rate,106.16220481750558,118.66899331439532,94.12438710320902,direct,airpollutiondiseases3rd.csv
+India,2021,Ischemic stroke,1,Number,433859.9469144005,573123.0539828788,326166.71584739233,direct,airpollutiondiseases3rd.csv
+India,2021,Ischemic stroke,3,Rate,30.60600359965497,40.43011201655373,23.00894505314292,direct,airpollutiondiseases3rd.csv
+India,2021,Lower respiratory infections,1,Number,325613.2413528087,399028.9216287624,270200.3011241579,strong,airpollutiondiseases1st.csv
+India,2021,Lower respiratory infections,3,Rate,22.969901019477174,28.14890081140837,19.060877704079576,strong,airpollutiondiseases1st.csv
+India,2021,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,94249.8343636574,111099.70467060656,80742.12858277619,indirect,airpollutiondiseases4th.csv
+India,2021,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,6.648714153763807,7.837363151985237,5.695833172947436,indirect,airpollutiondiseases4th.csv
+India,2021,Neonatal preterm birth,1,Number,176052.9779579161,196267.6499243383,157321.5751219402,indirect,airpollutiondiseases4th.csv
+India,2021,Neonatal preterm birth,3,Rate,12.419395050018442,13.845408968496669,11.098016142604386,indirect,airpollutiondiseases4th.csv
+India,2021,Otitis media,1,Number,66.8057428823507,185.3304914292626,20.060585259698296,strong,airpollutiondiseases1st.csv
+India,2021,Otitis media,3,Rate,0.0047127116058451,0.0130738634164101,0.0014151441013075,strong,airpollutiondiseases1st.csv
+India,2021,Pulmonary Arterial Hypertension,1,Number,3836.136030180814,6177.902362385501,2197.570921213613,direct,airpollutiondiseases3rd.csv
+India,2021,Pulmonary Arterial Hypertension,3,Rate,0.2706145012543524,0.4358109184455164,0.1550243667420884,direct,airpollutiondiseases3rd.csv
+India,2021,Pulmonary aspiration and foreign body in airway,1,Number,6299.262024706088,9877.660550504594,3015.683944034593,direct,airpollutiondiseases2nd.csv
+India,2021,Pulmonary aspiration and foreign body in airway,3,Rate,0.4443720550248506,0.6968048480044646,0.2127369311294245,direct,airpollutiondiseases2nd.csv
+India,2021,Respiratory infections and tuberculosis,1,Number,2548206.198373436,2731582.640201085,2415723.255890863,strong,airpollutiondiseases1st.csv
+India,2021,Respiratory infections and tuberculosis,3,Rate,179.7594100002688,192.6954278986352,170.41359819313632,strong,airpollutiondiseases1st.csv
+India,2021,Stroke,1,Number,1053339.20536675,1231790.590486613,887199.2102892261,direct,airpollutiondiseases3rd.csv
+India,2021,Stroke,3,Rate,74.30624500000934,86.89483211017084,62.58614655913487,direct,airpollutiondiseases3rd.csv
+India,2021,"Tracheal, bronchus, and lung cancer",1,Number,101941.54743689913,124755.33927861706,84270.1454973498,direct,airpollutiondiseases5th.csv
+India,2021,"Tracheal, bronchus, and lung cancer",3,Rate,7.191314593563328,8.800679551530186,5.944711870220655,direct,airpollutiondiseases5th.csv
+India,2021,Tuberculosis,1,Number,352040.05208637693,428936.2084148351,297959.63720610493,strong,airpollutiondiseases1st.csv
+India,2021,Tuberculosis,3,Rate,24.834141012570072,30.258665802485208,21.01911871270564,strong,airpollutiondiseases1st.csv
+India,2021,Upper respiratory infections,1,Number,1267.6566856652823,3213.792496623913,220.32057738630328,strong,airpollutiondiseases1st.csv
+India,2021,Upper respiratory infections,3,Rate,0.089424952361996,0.2267122038338841,0.0155421869027556,strong,airpollutiondiseases1st.csv
+India,2022,Asthma,1,Number,165820.1420778979,299044.60403920506,96033.9449706566,direct,airpollutiondiseases2nd.csv
+India,2022,Asthma,3,Rate,11.593083733826552,20.90728599874725,6.714079190762615,direct,airpollutiondiseases2nd.csv
+India,2022,Atrial fibrillation and flutter,1,Number,35703.48044814838,48208.773760462864,25711.465620350835,direct,airpollutiondiseases3rd.csv
+India,2022,Atrial fibrillation and flutter,3,Rate,2.496158990323253,3.370449113760837,1.7975812233721429,direct,airpollutiondiseases3rd.csv
+India,2022,Cardiovascular diseases,1,Number,3036919.116135077,3381053.895314923,2707666.24011308,direct,airpollutiondiseases3rd.csv
+India,2022,Cardiovascular diseases,3,Rate,212.3219601975319,236.381662841374,189.30270503652088,direct,airpollutiondiseases3rd.csv
+India,2022,Chronic obstructive pulmonary disease,1,Number,945005.7683905222,1136384.504401771,725297.9145955702,direct,airpollutiondiseases2nd.csv
+India,2022,Chronic obstructive pulmonary disease,3,Rate,66.06875898558711,79.44873613221154,50.70819111906306,direct,airpollutiondiseases2nd.csv
+India,2022,Chronic respiratory diseases,1,Number,1170060.885819198,1374069.046197757,918271.8614234154,direct,airpollutiondiseases2nd.csv
+India,2022,Chronic respiratory diseases,3,Rate,81.80317332381102,96.06611904328516,64.1996952028748,direct,airpollutiondiseases2nd.csv
+India,2022,Congenital birth defects,1,Number,101512.8649119675,122387.57813643756,76631.60320291526,indirect,airpollutiondiseases4th.csv
+India,2022,Congenital birth defects,3,Rate,7.097130229403685,8.556556661550951,5.357591553452075,indirect,airpollutiondiseases4th.csv
+India,2022,Hypertensive heart disease,1,Number,231895.00815818572,339756.8508572944,145519.49011245373,direct,airpollutiondiseases3rd.csv
+India,2022,Hypertensive heart disease,3,Rate,16.212615749486666,23.75362589714512,10.173791993163931,direct,airpollutiondiseases3rd.csv
+India,2022,Interstitial lung disease and pulmonary sarcoidosis,1,Number,42559.70052664325,69957.79118132965,23992.60986380678,direct,airpollutiondiseases2nd.csv
+India,2022,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,2.9755020452230245,4.891001303193371,1.677409822827667,direct,airpollutiondiseases2nd.csv
+India,2022,Ischemic heart disease,1,Number,1422124.7493005712,1625917.7240704976,1234775.5303270454,direct,airpollutiondiseases3rd.csv
+India,2022,Ischemic heart disease,3,Rate,99.4258664357167,113.6737677537814,86.32760734722326,direct,airpollutiondiseases3rd.csv
+India,2022,Ischemic stroke,1,Number,436855.3266606283,576401.103370114,313738.4024876791,direct,airpollutiondiseases3rd.csv
+India,2022,Ischemic stroke,3,Rate,30.542130274895367,40.29827843532183,21.93458240343316,direct,airpollutiondiseases3rd.csv
+India,2022,Lower respiratory infections,1,Number,385248.08958994254,469041.528110673,322152.9529954338,strong,airpollutiondiseases1st.csv
+India,2022,Lower respiratory infections,3,Rate,26.93408234335496,32.792383614498064,22.52287395472785,strong,airpollutiondiseases1st.csv
+India,2022,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,90060.09596225663,109929.0872991653,71112.56032766594,indirect,airpollutiondiseases4th.csv
+India,2022,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,6.296425877360655,7.685538667815559,4.971735375899852,indirect,airpollutiondiseases4th.csv
+India,2022,Neonatal preterm birth,1,Number,167395.92924213977,194963.30784021705,141449.34691689842,indirect,airpollutiondiseases4th.csv
+India,2022,Neonatal preterm birth,3,Rate,11.70325269347662,13.630587481668226,9.889233613925718,indirect,airpollutiondiseases4th.csv
+India,2022,Otitis media,1,Number,71.07611166021866,187.5114940080423,21.86969480004869,strong,airpollutiondiseases1st.csv
+India,2022,Otitis media,3,Rate,0.0049691871182008,0.0131096043209813,0.0015289891799217,strong,airpollutiondiseases1st.csv
+India,2022,Pulmonary Arterial Hypertension,1,Number,3711.838750370236,6243.268155219407,1960.7265896549832,direct,airpollutiondiseases3rd.csv
+India,2022,Pulmonary Arterial Hypertension,3,Rate,0.2595080241777213,0.4364893769189384,0.1370814621684021,direct,airpollutiondiseases3rd.csv
+India,2022,Pulmonary aspiration and foreign body in airway,1,Number,6114.72807322771,9467.065781901842,2955.841390387681,direct,airpollutiondiseases2nd.csv
+India,2022,Pulmonary aspiration and foreign body in airway,3,Rate,0.4275026765397858,0.6618766872824987,0.2066535241935618,direct,airpollutiondiseases2nd.csv
+India,2022,Respiratory infections and tuberculosis,1,Number,927770.1277423667,1046247.7507167454,806489.7403626415,strong,airpollutiondiseases1st.csv
+India,2022,Respiratory infections and tuberculosis,3,Rate,64.86375323214641,73.14695083718442,56.38460426661501,strong,airpollutiondiseases1st.csv
+India,2022,Stroke,1,Number,1021367.801342075,1216174.559800498,851328.7458497637,direct,airpollutiondiseases3rd.csv
+India,2022,Stroke,3,Rate,71.40750391125907,85.02714646145583,59.5194607360391,direct,airpollutiondiseases3rd.csv
+India,2022,"Tracheal, bronchus, and lung cancer",1,Number,96776.77197697284,117094.11515145996,78819.73490583595,direct,airpollutiondiseases5th.csv
+India,2022,"Tracheal, bronchus, and lung cancer",3,Rate,6.766012903857174,8.186471587097643,5.510571726636846,direct,airpollutiondiseases5th.csv
+India,2022,Tuberculosis,1,Number,349370.64249699825,427896.1169902506,290304.9420382392,strong,airpollutiondiseases1st.csv
+India,2022,Tuberculosis,3,Rate,24.425760717933617,29.915759638638168,20.29626473128903,strong,airpollutiondiseases1st.csv
+India,2022,Upper respiratory infections,1,Number,1284.2156803941189,3318.3298945673514,228.82398783626817,strong,airpollutiondiseases1st.csv
+India,2022,Upper respiratory infections,3,Rate,0.0897841464163508,0.231996401897347,0.0159979096510951,strong,airpollutiondiseases1st.csv
+India,2023,Asthma,1,Number,168948.1401720418,290989.3900762885,92605.17426531424,direct,airpollutiondiseases2nd.csv
+India,2023,Asthma,3,Rate,11.70499387471361,20.16020433833248,6.4158326717210175,direct,airpollutiondiseases2nd.csv
+India,2023,Atrial fibrillation and flutter,1,Number,38482.56462548107,55170.37541456663,27836.092673587667,direct,airpollutiondiseases3rd.csv
+India,2023,Atrial fibrillation and flutter,3,Rate,2.6661328308547154,3.822290707879696,1.928528446116756,direct,airpollutiondiseases3rd.csv
+India,2023,Cardiovascular diseases,1,Number,3121036.854791243,3559064.0857357862,2725952.1079097134,direct,airpollutiondiseases3rd.csv
+India,2023,Cardiovascular diseases,3,Rate,216.2303605762465,246.57757866306704,188.8582655799246,direct,airpollutiondiseases3rd.csv
+India,2023,Chronic obstructive pulmonary disease,1,Number,1023485.11395161,1256104.89884215,801489.9125742757,direct,airpollutiondiseases2nd.csv
+India,2023,Chronic obstructive pulmonary disease,3,Rate,70.90866450181029,87.02493044299379,55.52848647977663,direct,airpollutiondiseases2nd.csv
+India,2023,Chronic respiratory diseases,1,Number,1254035.6505858472,1543618.3882247095,1034247.7039230516,direct,airpollutiondiseases2nd.csv
+India,2023,Chronic respiratory diseases,3,Rate,86.88156965701161,106.94431889375404,71.65431372626166,direct,airpollutiondiseases2nd.csv
+India,2023,Congenital birth defects,1,Number,95166.78168225824,119679.9406857406,71685.90833685285,indirect,airpollutiondiseases4th.csv
+India,2023,Congenital birth defects,3,Rate,6.593304877654846,8.291615233089724,4.966512902312478,indirect,airpollutiondiseases4th.csv
+India,2023,Hypertensive heart disease,1,Number,245787.9102470315,372078.04105185,155601.42785445778,direct,airpollutiondiseases3rd.csv
+India,2023,Hypertensive heart disease,3,Rate,17.02857445480329,25.77815409505199,10.780312574488557,direct,airpollutiondiseases3rd.csv
+India,2023,Interstitial lung disease and pulmonary sarcoidosis,1,Number,43590.22524014104,73088.63068379501,23895.0752243545,direct,airpollutiondiseases2nd.csv
+India,2023,Interstitial lung disease and pulmonary sarcoidosis,3,Rate,3.0199996218583447,5.063695721029289,1.6554885354291362,direct,airpollutiondiseases2nd.csv
+India,2023,Ischemic heart disease,1,Number,1464976.9316666117,1747103.66266649,1258722.2142881774,direct,airpollutiondiseases3rd.csv
+India,2023,Ischemic heart disease,3,Rate,101.49591462973709,121.04209995550497,87.20626218913048,direct,airpollutiondiseases3rd.csv
+India,2023,Ischemic stroke,1,Number,436978.3874512439,577874.3667926474,305518.46954012086,direct,airpollutiondiseases3rd.csv
+India,2023,Ischemic stroke,3,Rate,30.27455255376322,40.03604843932618,21.166801901088768,direct,airpollutiondiseases3rd.csv
+India,2023,Lower respiratory infections,1,Number,412054.882746093,502889.1890047109,334487.73712492606,strong,airpollutiondiseases1st.csv
+India,2023,Lower respiratory infections,3,Rate,28.54781280029145,34.84095694078506,23.17383849403255,strong,airpollutiondiseases1st.csv
+India,2023,Neonatal encephalopathy due to birth asphyxia and trauma,1,Number,85632.09149839057,105809.07005768764,66852.24076786278,indirect,airpollutiondiseases4th.csv
+India,2023,Neonatal encephalopathy due to birth asphyxia and trauma,3,Rate,5.932726489009578,7.330619417610648,4.631628782074063,indirect,airpollutiondiseases4th.csv
+India,2023,Neonatal preterm birth,1,Number,157111.56163590736,185809.52914887408,128462.75943226716,indirect,airpollutiondiseases4th.csv
+India,2023,Neonatal preterm birth,3,Rate,10.88493702696175,12.873177522618851,8.900102781553578,indirect,airpollutiondiseases4th.csv
+India,2023,Otitis media,1,Number,71.126507902013,258.38344470335164,19.18251186258084,strong,airpollutiondiseases1st.csv
+India,2023,Otitis media,3,Rate,0.0049277567570442,0.0179012129668925,0.0013289947058575,strong,airpollutiondiseases1st.csv
+India,2023,Pulmonary Arterial Hypertension,1,Number,3830.791994142407,6496.108117113016,2021.2202351578717,direct,airpollutiondiseases3rd.csv
+India,2023,Pulmonary Arterial Hypertension,3,Rate,0.2654033171426347,0.450060625958095,0.140033328853922,direct,airpollutiondiseases3rd.csv
+India,2023,Pulmonary aspiration and foreign body in airway,1,Number,6479.811500575725,10759.505306447918,3101.6836562346894,direct,airpollutiondiseases2nd.csv
+India,2023,Pulmonary aspiration and foreign body in airway,3,Rate,0.4489315706364246,0.7454355139907145,0.2148895404267624,direct,airpollutiondiseases2nd.csv
+India,2023,Respiratory infections and tuberculosis,1,Number,800613.6974441126,932682.2957598828,691889.8895425149,strong,airpollutiondiseases1st.csv
+India,2023,Respiratory infections and tuberculosis,3,Rate,55.46778091225134,64.61770190430207,47.93522385522882,strong,airpollutiondiseases1st.csv
+India,2023,Stroke,1,Number,1034796.11697217,1261719.5443259347,830428.2370961548,direct,airpollutiondiseases3rd.csv
+India,2023,Stroke,3,Rate,71.69230864810109,87.41392194612288,57.53337928847013,direct,airpollutiondiseases3rd.csv
+India,2023,"Tracheal, bronchus, and lung cancer",1,Number,101269.49403932744,123773.9186853603,79972.8470296371,direct,airpollutiondiseases5th.csv
+India,2023,"Tracheal, bronchus, and lung cancer",3,Rate,7.016110424291196,8.57525249219162,5.54064509779206,direct,airpollutiondiseases5th.csv
+India,2023,Tuberculosis,1,Number,334868.2968411054,445794.3167897289,264390.6880411016,strong,airpollutiondiseases1st.csv
+India,2023,Tuberculosis,3,Rate,23.20020427197071,30.885334056310647,18.317404269150565,strong,airpollutiondiseases1st.csv
+India,2023,Upper respiratory infections,1,Number,1193.7086067092405,2895.950242748915,215.61691330034952,strong,airpollutiondiseases1st.csv
+India,2023,Upper respiratory infections,3,Rate,0.0827020168170915,0.2006360047428377,0.0149382801544618,strong,airpollutiondiseases1st.csv

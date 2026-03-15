@@ -18,4 +18,4 @@ services:
       - key: ML_SERVICE_URL
         value: https://vayu-ml-service.onrender.com
       - key: FRONTEND_URL
-        value: https://vayu-frontend.onrender.com
+        value: https://vayu-frontend-ijqv.onrender.com

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>AQI Live Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <div id="topbar">
+      <div style="position: relative">
+        <div class="search-box">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#777"
+            stroke-width="2"
+            style="flex-shrink: 0"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16.5" y1="16.5" x2="22" y2="22" stroke-linecap="round" />
+          </svg>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search city or station..."
+          />
+        </div>
+        <div id="searchDrop"></div>
+      </div>
+
+      <div class="metric-pill" id="metricPill">
+        <span id="metricLabel">AQI</span>
+        <svg viewBox="0 0 10 6" width="9" fill="#aaa">
+          <path d="M0 0l5 6 5-6z" />
+        </svg>
+      </div>
+      <div id="metricMenu">
+        <div class="mi active" data-m="AQI">AQI</div>
+        <div class="mi" data-m="PM2.5">Soil Pollution</div>
+        <div class="mi" data-m="PM10">Water Pollution</div>
+        <div class="mi" data-m="NO2">Noise Pollution</div>
+      </div>
+
+      <div class="climate-badge">
+        <span style="font-size: 18px">🌍</span>
+        <div>
+          <div class="cb-top">Track the</div>
+          <div class="cb-bot">Death Count↗</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAP fills below topbar -->
+    <div id="map"></div>
+
+    <!-- SVG layer for node connectors -->
+    <svg id="canvas-svg"></svg>
+
+    <!-- Floating node cards container -->
+    <div id="app"></div>
+
+    <!-- ZOOM CONTROLS -->
+    <div class="map-btns">
+      <button class="mb" id="zIn">+</button>
+      <button class="mb" id="zOut">−</button>
+      <button class="mb" id="zLoc" title="My location">⊕</button>
+    </div>
+
+    <!-- LEGEND -->
+    <div class="legend">
+      <div class="leg-title">AQI</div>
+      <div class="leg-row">
+        <span class="ld" style="background: #a8e063"></span>Good (0–50)
+      </div>
+      <div class="leg-row">
+        <span class="ld" style="background: #fdd835"></span>Satisfactory
+        (51–100)
+      </div>
+      <div class="leg-row">
+        <span class="ld" style="background: #ff7c00"></span>Moderate (101–200)
+      </div>
+      <div class="leg-row">
+        <span class="ld" style="background: #f50057"></span>Poor (201–300)
+      </div>
+      <div class="leg-row">
+        <span class="ld" style="background: #9c27b0"></span>Very Poor (301–400)
+      </div>
+      <div class="leg-row">
+        <span class="ld" style="background: #6a0080"></span>Severe (400+)
+      </div>
+      <div class="leg-row">
+        <span class="ld" style="background: #607d8b"></span>Offline / No Data
+      </div>
+    </div>
+
+    <!-- CHAT WIDGET -->
+    <div class="chat-widget">
+      <div class="chat-label">We Are Here!</div>
+      <button class="chat-btn">
+        <svg viewBox="0 0 24 24" fill="white" width="20">
+          <path
+            d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

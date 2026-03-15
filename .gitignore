@@ -1,7 +1,10 @@
-data/*.csv
-data/AirPollutionDeath
+# Node.js
+node_modules/
+
+# Python cache
 __pycache__/
-.ipynb_checkpoints/
 *.pyc
-models/*.pkl
-.env
+
+# Large data files (too big for GitHub)
+ml_model/air_pollution_with_aqi.csv
+Backend/data/city_data.json

@@ -321,7 +321,6 @@ window.addEventListener("load", () => {
           </table>
         </div>`;
       app.appendChild(newNode);
-
     } else if (type === "past") {
       // ── PAST: real line chart from backend ──
       const chartId = `chart-${newId}`;
@@ -342,18 +341,18 @@ window.addEventListener("load", () => {
 
       try {
         const res = await fetch(
-          `${API_BASE}/past/city/${encodeURIComponent(cityName)}`
+          `${API_BASE}/past/city/${encodeURIComponent(cityName)}`,
         );
         const json = await res.json();
         const statusEl = document.getElementById(`past-status-${newId}`);
-        const canvas   = document.getElementById(chartId);
+        const canvas = document.getElementById(chartId);
 
         if (json.status === "ok" && json.data && json.data.length > 0) {
           statusEl.style.display = "none";
-          canvas.style.display   = "block";
+          canvas.style.display = "block";
 
           const labels = json.data.map(
-            (r) => `${r.year}-${String(r.month).padStart(2, "0")}`
+            (r) => `${r.year}-${String(r.month).padStart(2, "0")}`,
           );
           const values = json.data.map((r) => r.pm25);
 
@@ -361,15 +360,17 @@ window.addEventListener("load", () => {
             type: "line",
             data: {
               labels,
-              datasets: [{
-                data: values,
-                borderColor: "#4fc3f7",
-                backgroundColor: "rgba(79,195,247,0.06)",
-                borderWidth: 1.5,
-                fill: true,
-                tension: 0.3,
-                pointRadius: 0,
-              }],
+              datasets: [
+                {
+                  data: values,
+                  borderColor: "#4fc3f7",
+                  backgroundColor: "rgba(79,195,247,0.06)",
+                  borderWidth: 1.5,
+                  fill: true,
+                  tension: 0.3,
+                  pointRadius: 0,
+                },
+              ],
             },
             options: {
               responsive: false,
@@ -379,7 +380,7 @@ window.addEventListener("load", () => {
                 x: { display: false },
                 y: {
                   ticks: { color: "#666", font: { size: 9 } },
-                  grid:  { color: "rgba(255,255,255,0.04)" },
+                  grid: { color: "rgba(255,255,255,0.04)" },
                 },
               },
             },
@@ -391,7 +392,6 @@ window.addEventListener("load", () => {
         document.getElementById(`past-status-${newId}`).textContent =
           "Backend offline — run: node server.js";
       }
-
     } else if (type === "future") {
       // ── FUTURE: Random Forest forecast from backend + ml_service ──
       const chartId = `chart-${newId}`;
@@ -416,16 +416,20 @@ window.addEventListener("load", () => {
 
       try {
         const res = await fetch(
-          `${API_BASE}/future/city/${encodeURIComponent(cityName)}`
+          `${API_BASE}/future/city/${encodeURIComponent(cityName)}`,
         );
         const json = await res.json();
         const statusEl = document.getElementById(`future-status-${newId}`);
-        const canvas   = document.getElementById(chartId);
-        const badgeEl  = document.getElementById(`future-badge-${newId}`);
+        const canvas = document.getElementById(chartId);
+        const badgeEl = document.getElementById(`future-badge-${newId}`);
 
-        if (json.status === "ok" && json.forecasts && json.forecasts.length > 0) {
+        if (
+          json.status === "ok" &&
+          json.forecasts &&
+          json.forecasts.length > 0
+        ) {
           statusEl.style.display = "none";
-          canvas.style.display   = "block";
+          canvas.style.display = "block";
 
           const labels = json.forecasts.map((f) => f.month_label);
           const values = json.forecasts.map((f) => f.predicted_pm25);
@@ -464,11 +468,11 @@ window.addEventListener("load", () => {
               scales: {
                 x: {
                   ticks: { color: "#888", font: { size: 9 } },
-                  grid:  { display: false },
+                  grid: { display: false },
                 },
                 y: {
                   ticks: { color: "#666", font: { size: 9 } },
-                  grid:  { color: "rgba(255,255,255,0.04)" },
+                  grid: { color: "rgba(255,255,255,0.04)" },
                   title: {
                     display: true,
                     text: "μg/m³",
@@ -482,8 +486,7 @@ window.addEventListener("load", () => {
 
           if (json.model_badge) {
             badgeEl.style.display = "block";
-            badgeEl.textContent =
-              `MAE ±${json.model_badge.mae} μg/m³  ·  R²=${json.model_badge.r2}`;
+            badgeEl.textContent = `MAE ±${json.model_badge.mae} μg/m³  ·  R²=${json.model_badge.r2}`;
           }
         } else {
           statusEl.textContent =

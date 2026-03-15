@@ -197,7 +197,10 @@ body {
   background: #0c0d13 !important;
 }
 .leaflet-tile-pane {
-  filter: brightness(0.5) contrast(1.1) saturate(0.6);
+  filter: brightness(2) contrast(1.05) saturate(0.8);
+}
+.leaflet-shadow-pane {
+  filter: brightness(1.4) contrast(1.2);
 }
 .leaflet-control-zoom {
   display: none !important;
@@ -239,14 +242,14 @@ body {
 }
 .aqi-circle:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 10px 4px var(--gc1, rgba(255, 200, 0, 0.85));
+  box-shadow: none;
 }
 
 /* Zoomed out: smaller dot, no number, same tight glow */
 .zoom-out-style .aqi-circle {
   width: calc(var(--marker-size) * 0.65);
   height: calc(var(--marker-size) * 0.65);
-  box-shadow: 0 0 5px 2px var(--gc1, rgba(255, 200, 0, 0.7));
+  box-shadow: none;
 }
 .zoom-out-style .aqi-circle span {
   display: none;

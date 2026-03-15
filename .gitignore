@@ -5,6 +5,7 @@ node_modules/
 __pycache__/
 *.pyc
 
+# Large data files (too big for GitHub)
 ml_model/air_pollution_with_aqi.csv
 
 .env

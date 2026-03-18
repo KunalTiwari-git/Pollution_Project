@@ -312,17 +312,19 @@ body {
 .node {
   position: absolute;
   width: 220px;
+  min-width: 200px;
+  min-height: 120px;
   background: #1a1b24;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-  pointer-events: all;
-  transform-origin: top left;
-  font-size: 13px;
+  overflow: auto;
   resize: both;
-  min-width: 180px;
-  max-width: 600px;
+  width: 600px;
+}
+
+.node canvas {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .node .header {

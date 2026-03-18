@@ -10,6 +10,8 @@ window.addEventListener("load", () => {
   let connections = [];
   let paths = {};
   let isDraggingNode = false;
+  
+  const nodeCharts = {}; 
 
   // All loaded station data for search
   let allStations = [];

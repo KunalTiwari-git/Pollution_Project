@@ -10,8 +10,8 @@ window.addEventListener("load", () => {
   let connections = [];
   let paths = {};
   let isDraggingNode = false;
-  
-  const nodeCharts = {}; 
+
+  const nodeCharts = {};
 
   // All loaded station data for search
   let allStations = [];
@@ -127,7 +127,7 @@ window.addEventListener("load", () => {
       if (concentration >= r.lo && concentration <= r.hi) {
         return Math.round(
           ((r.aqiHi - r.aqiLo) / (r.hi - r.lo)) * (concentration - r.lo) +
-            r.aqiLo,
+          r.aqiLo,
         );
       }
     }
@@ -210,8 +210,22 @@ window.addEventListener("load", () => {
   function setupNode(node) {
     makeDraggable(node);
 
+    // ResizeObserver — redraws Chart.js when user drags the node corner
+    const ro = new ResizeObserver(() => {
+      const chart = nodeCharts[node.id];
+      if (chart) chart.resize();
+      updateLines();
+    });
+    ro.observe(node);
+
     node.querySelector(".close-btn").onclick = (e) => {
       e.stopPropagation();
+      // Destroy chart instance and stop observing before removal
+      if (nodeCharts[node.id]) {
+        nodeCharts[node.id].destroy();
+        delete nodeCharts[node.id];
+      }
+      ro.disconnect();
       removeNodeAndChildren(node.id);
       node.remove();
     };
@@ -279,8 +293,6 @@ window.addEventListener("load", () => {
 
   // ════════════════════════════════════════════════════════
   // ── Spawn a child node based on PPF type ──
-  // ONLY THIS FUNCTION WAS CHANGED — everything else above
-  // and below is identical to the original script.js
   // ════════════════════════════════════════════════════════
   async function spawnChildNode(parentNode, type, data) {
     const newId = `node-${nodeCount++}`;
@@ -297,11 +309,10 @@ window.addEventListener("load", () => {
     newNode.dataset.lng = cLL.lng;
 
     const API_BASE = API_BASE_URL;
-    // City name stored on the root node when the marker was clicked
     const cityName = data.cityName || "";
 
     if (type === "present") {
-      // ── PRESENT: unchanged from original ──
+      // ── PRESENT: unchanged ──
       newNode.innerHTML = `
         <span class="close-btn">&times;</span>
         <div class="header" style="background:${data.color};color:${data.aqi > 200 ? "#fff" : "#000"};">
@@ -324,7 +335,7 @@ window.addEventListener("load", () => {
         </div>`;
       app.appendChild(newNode);
     } else if (type === "past") {
-      // ── PAST: real line chart from backend ──
+      // ── PAST: responsive line chart ──
       const chartId = `chart-${newId}`;
       newNode.innerHTML = `
         <span class="close-btn">&times;</span>
@@ -336,8 +347,8 @@ window.addEventListener("load", () => {
           <div id="past-status-${newId}" style="color:#666;font-size:11px;padding:8px 0;text-align:center;">
             Loading...
           </div>
-          <canvas id="${chartId}" width="190" height="110"
-            style="display:none;margin-top:4px;border-radius:6px;"></canvas>
+          <canvas id="${chartId}"
+            style="display:none;margin-top:4px;border-radius:6px;width:100%;"></canvas>
         </div>`;
       app.appendChild(newNode);
 
@@ -358,7 +369,7 @@ window.addEventListener("load", () => {
           );
           const values = json.data.map((r) => r.pm25);
 
-          new Chart(canvas.getContext("2d"), {
+          nodeCharts[newId] = new Chart(canvas.getContext("2d"), {
             type: "line",
             data: {
               labels,
@@ -375,7 +386,8 @@ window.addEventListener("load", () => {
               ],
             },
             options: {
-              responsive: false,
+              responsive: true,
+              maintainAspectRatio: false,
               animation: false,
               plugins: { legend: { display: false } },
               scales: {
@@ -395,7 +407,7 @@ window.addEventListener("load", () => {
           "Backend offline — run: node server.js";
       }
     } else if (type === "future") {
-      // ── FUTURE: Random Forest forecast from backend + ml_service ──
+      // ── FUTURE: responsive bar chart ──
       const chartId = `chart-${newId}`;
       newNode.innerHTML = `
         <span class="close-btn">&times;</span>
@@ -407,8 +419,8 @@ window.addEventListener("load", () => {
           <div id="future-status-${newId}" style="color:#666;font-size:11px;padding:8px 0;text-align:center;">
             Running ML model...
           </div>
-          <canvas id="${chartId}" width="190" height="110"
-            style="display:none;margin-top:4px;border-radius:6px;"></canvas>
+          <canvas id="${chartId}"
+            style="display:none;margin-top:4px;border-radius:6px;width:100%;"></canvas>
           <div id="future-badge-${newId}"
             style="display:none;margin-top:6px;font-size:9px;
                    font-family:monospace;color:#5a5e80;text-align:center;">
@@ -439,7 +451,7 @@ window.addEventListener("load", () => {
           const confLo = json.forecasts.map((f) => f.confidence_low);
           const confHi = json.forecasts.map((f) => f.confidence_high);
 
-          new Chart(canvas.getContext("2d"), {
+          nodeCharts[newId] = new Chart(canvas.getContext("2d"), {
             type: "bar",
             data: {
               labels,
@@ -464,7 +476,8 @@ window.addEventListener("load", () => {
               ],
             },
             options: {
-              responsive: false,
+              responsive: true,
+              maintainAspectRatio: false,
               animation: false,
               plugins: { legend: { display: false } },
               scales: {
@@ -500,7 +513,7 @@ window.addEventListener("load", () => {
       }
     }
 
-    // Connect with a dashed SVG line (unchanged from original)
+    // Connect with a dashed SVG line
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("class", "connector");
     svg.appendChild(path);
@@ -686,7 +699,6 @@ window.addEventListener("load", () => {
           newNode.dataset.color = color;
           newNode.dataset.rowsHtml = encodeURIComponent(rowsHtml);
           newNode.dataset.isOffline = isOffline;
-          // ── ONE NEW LINE: store city name so Past/Future can call the API ──
           newNode.dataset.cityName = info.city;
 
           newNode.innerHTML = `

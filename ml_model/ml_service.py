@@ -4,12 +4,12 @@ ml_model/ml_service.py
 A tiny Flask server that loads the trained Random Forest model once
 and answers prediction requests from the Node.js backend.
 
-Structure (matches the video):
+Structure :
     ml_model/
         models/
             rf_model.pkl      ← saved from Phase 5 notebook
             scaler.pkl        ← saved from Phase 5 notebook
-        ml_service.py         ← YOU ARE HERE
+        ml_service.py         
         requirements.txt
 
 How to run:
@@ -39,14 +39,14 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-# ── Paths ────────────────────────────────────────────────────────────
+# ── Paths ───
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 
 # CSV data lives one level up in Backend/data/
 AQI_CSV = os.path.join(BASE_DIR, "city_data.json")
 
-# ── Load model + scaler at startup ───────────────────────────────────
+# ── Load model + scaler at startup ──
 rf_model = None
 scaler   = None
 

@@ -23,10 +23,10 @@ const CPCB_URL = `https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd
 const liveCache = new Map();
 const CACHE_TTL = 30 * 60 * 1000; // 30 minutes in ms
 
-// ── AQI colour helper (matches your frontend map exactly) ───────────────────
+// ── AQI colour helper ─
 function getAQIColor(aqi) {
   if (!aqi) return "#607d8b";
-  if (aqi <= 50)  return "#a8e063";
+  if (aqi <= 50) return "#a8e063";
   if (aqi <= 100) return "#fdd835";
   if (aqi <= 200) return "#ff7c00";
   if (aqi <= 300) return "#f50057";
@@ -161,11 +161,11 @@ router.get("/present/city/:cityName", async (req, res) => {
       status: "ok",
       city,
       pm25,
-      pm10:  avg("PM10"),
-      no2:   avg("NO2"),
+      pm10: avg("PM10"),
+      no2: avg("NO2"),
       ozone: avg("OZONE"),
-      co:    avg("CO"),
-      nh3:   avg("NH3"),
+      co: avg("CO"),
+      nh3: avg("NH3"),
       aqi_computed: aqi,
       colour: getAQIColor(aqi),
       historical_avg_pm25: historicalAvg,
@@ -191,14 +191,19 @@ router.get("/present/city/:cityName", async (req, res) => {
 // GET /api/future/city/:cityName
 // Returns: 3-month PM2.5 forecast from Random Forest model
 // ════════════════════════════════════════════════════════════════════
+
 router.get("/future/city/:cityName", async (req, res) => {
   const city = req.params.cityName.replace(/-/g, " ").trim();
 
   try {
+    // AbortController gives a real timeout )
+
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 50000);
     const response = await fetch(
       `${ML_SERVICE_URL}/predict?city=${encodeURIComponent(city)}`,
-      { timeout: 10000 }
-    );
+      { signal: controller.signal }
+    ).finally(() => clearTimeout(timer));
 
     if (!response.ok) {
       const err = await response.json();
@@ -214,7 +219,9 @@ router.get("/future/city/:cityName", async (req, res) => {
     res.status(503).json({
       status: "error",
       message:
-        "ML service is not running. Start it with: cd ml_model && python ml_service.py",
+        err.name === "AbortError"
+          ? "ML service is waking up (Render cold start). Please try again in ~30 seconds."
+          : "ML service is not running. Start it with: cd ml_model && python ml_service.py",
       detail: err.message,
     });
   }

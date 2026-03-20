@@ -108,7 +108,11 @@ router.get("/stations", async (req, res) => {
   }
 
   try {
-    const response = await fetch(CPCB_URL, { timeout: 10000 });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
+    const response = await fetch(CPCB_URL, { signal: controller.signal })
+      .finally(() => clearTimeout(timer));
+
     if (!response.ok) throw new Error("CPCB API returned " + response.status);
     const json = await response.json();
     const records = json.records || [];
@@ -118,7 +122,9 @@ router.get("/stations", async (req, res) => {
   } catch (err) {
     res.status(503).json({
       status: "error",
-      message: "Live station data unavailable: " + err.message,
+      message: err.name === "AbortError"
+        ? "CPCB API timed out after 12s — try again in a moment."
+        : "Live station data unavailable: " + err.message,
     });
   }
 });
@@ -139,7 +145,11 @@ router.get("/present/city/:cityName", async (req, res) => {
   }
 
   try {
-    const response = await fetch(CPCB_URL, { timeout: 8000 });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
+    const response = await fetch(CPCB_URL, { signal: controller.signal })
+      .finally(() => clearTimeout(timer));
+
     const json = await response.json();
     const records = json.records || [];
 
@@ -208,7 +218,9 @@ router.get("/present/city/:cityName", async (req, res) => {
   } catch (err) {
     res.status(503).json({
       status: "error",
-      message: "Live API unreachable. Try again in a moment.",
+      message: err.name === "AbortError"
+        ? "CPCB API timed out after 12s — try again in a moment."
+        : "Live API unreachable. Try again in a moment.",
       detail: err.message,
     });
   }

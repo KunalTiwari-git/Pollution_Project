@@ -34,10 +34,20 @@ function removeNodeAndChildren(targetId) {
 }
 
 function makeDraggable(node) {
-  node.querySelector(".header").addEventListener("mousedown", (e) => {
+  // Support both root nodes (.header) and popup nodes (.np-header)
+  const handle = node.querySelector(".np-header") || node.querySelector(".header");
+  if (!handle) return;
+
+  handle.addEventListener("mousedown", (e) => {
+    // Don't drag if clicking close button
+    if (e.target.classList.contains("close-btn")) return;
     window.VAYU.isDraggingNode = true;
-    const sX = e.clientX - node.offsetLeft;
-    const sY = e.clientY - node.offsetTop;
+
+    // Get current position — syncNodes may not have run yet so default to 0
+    const startLeft = parseInt(node.style.left) || 0;
+    const startTop  = parseInt(node.style.top)  || 0;
+    const sX = e.clientX - startLeft;
+    const sY = e.clientY - startTop;
 
     const move = (m) => {
       node.style.left = (m.clientX - sX) + "px";

@@ -1,69 +1,337 @@
 /* ════════════════════════════
-   NODES — floating cards, PPF buttons, tables, badges
+   NODES — all floating popup cards
 ════════════════════════════ */
 
-/* ── Card shell ── */
+/* ── Base shell ── */
 .node {
   position:        absolute;
-  width:           220px;
-  min-width:       200px;
-  min-height:      120px;
-  background:      #1a1b24;
-  border:          1px solid rgba(255,255,255,0.12);
-  border-radius:   12px;
-  overflow:        auto;
-  resize:          both;
-  box-shadow:      0 8px 32px rgba(0,0,0,0.6);
+  background:      #0d0f1a;
+  border:          1px solid rgba(255,255,255,0.1);
+  border-radius:   16px;
+  box-shadow:      0 16px 48px rgba(0,0,0,0.7);
   pointer-events:  all;
   transform-origin: top left;
   font-size:       13px;
+  font-family:     inherit;
+  color:           #e2e4f0;
+  overflow:        hidden;
 }
 
-.node canvas {
-  width:      100% !important;
-  min-height: 130px;
-  display:    block;
-}
+/* ── Per-type sizing ── */
+.node-present { width: 320px; }
+.node-past    { width: 340px; }
+.node-future  { width: 300px; }
 
-.node .header {
-  padding:     10px 12px;
-  cursor:      move;
-  user-select: none;
-}
-
-.node .node-content { padding: 10px 12px; }
-
-.node .close-btn {
+/* ── Close button ── */
+.close-btn {
   position:   absolute;
-  top:        8px;
-  right:      10px;
+  top:        12px;
+  right:      14px;
   cursor:     pointer;
-  font-size:  16px;
-  color:      rgba(255,255,255,0.5);
+  font-size:  18px;
+  color:      rgba(255,255,255,0.3);
   line-height: 1;
   z-index:    10;
   transition: color 0.15s;
 }
+.close-btn:hover { color: #fff; }
 
-.node .close-btn:hover { color: #fff; }
-
-/* ── Present: score row ── */
-.score-container {
+/* ── Header row (badge + close) ── */
+.np-header {
   display:     flex;
-  align-items: baseline;
-  gap:         8px;
-  margin-bottom: 6px;
+  align-items: center;
+  padding:     16px 18px 0;
+  cursor:      move;
+  user-select: none;
 }
 
-.aqi-number       { font-size: 36px; font-weight: 700; line-height: 1; }
-.prominent-label  { font-size: 11px; color: #888; }
+/* ── Type badges ── */
+.np-badge {
+  display:        inline-flex;
+  align-items:    center;
+  padding:        4px 10px;
+  border-radius:  6px;
+  font-size:      11px;
+  font-weight:    700;
+  letter-spacing: 0.08em;
+}
+.np-badge-past    { background: rgba(255,107,53,0.15);  color: #ff6b35; border: 1px solid rgba(255,107,53,0.3);  }
+.np-badge-present { background: rgba(79,195,247,0.15);  color: #4fc3f7; border: 1px solid rgba(79,195,247,0.3);  }
+.np-badge-future  { background: rgba(199,125,255,0.15); color: #c77dff; border: 1px solid rgba(199,125,255,0.3); }
 
-/* ── PPF grid (Past / Present / Future) ── */
+/* ── Subline ── */
+.np-subline {
+  padding:    6px 18px 14px;
+  font-size:  12px;
+  color:      #5a5e80;
+  font-weight: 400;
+}
+
+/* ── Section title ── */
+.np-section-title {
+  padding:        0 18px 8px;
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 0.1em;
+  color:          #5a5e80;
+  text-transform: uppercase;
+}
+
+/* ── Loading state ── */
+.np-loading {
+  padding:    20px;
+  text-align: center;
+  color:      #5a5e80;
+  font-size:  12px;
+}
+
+/* ─────────────────────────────
+   PRESENT PANEL
+───────────────────────────── */
+.np-aqi-hero {
+  text-align: center;
+  padding:    8px 18px 20px;
+}
+
+.np-aqi-number {
+  font-size:   72px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.np-aqi-label {
+  display:       inline-block;
+  margin-top:    10px;
+  padding:       5px 20px;
+  border-radius: 20px;
+  font-size:     13px;
+  font-weight:   700;
+  letter-spacing: 0.04em;
+}
+
+.np-prominent {
+  margin-top: 10px;
+  font-size:  12px;
+  color:      #5a5e80;
+}
+
+.np-prominent strong { color: #e2e4f0; }
+
+/* Pollutant fill bars */
+.np-bars-wrap {
+  padding:    0 18px 18px;
+  display:    flex;
+  flex-direction: column;
+  gap:        16px;
+}
+
+.np-bar-row   { display: flex; flex-direction: column; gap: 6px; }
+
+.np-bar-label {
+  font-size:   11px;
+  font-weight: 700;
+  color:       #9a9ec4;
+  letter-spacing: 0.06em;
+}
+
+.np-bar-track {
+  position:      relative;
+  height:        8px;
+  background:    rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow:      visible;
+}
+
+/* Filled portion (value) */
+.np-bar-fill {
+  height:        100%;
+  border-radius: 4px;
+  min-width:     4px;
+  transition:    width 0.4s ease;
+}
+
+/* WHO limit vertical tick */
+.np-bar-who {
+  position:   absolute;
+  top:        -4px;
+  width:      2px;
+  height:     16px;
+  background: rgba(77,255,195,0.8);
+  border-radius: 1px;
+  transform:  translateX(-50%);
+  z-index:    2;
+}
+
+.np-bar-who-tip {
+  position:    absolute;
+  top:         -14px;
+  left:        50%;
+  transform:   translateX(-50%);
+  font-size:   8px;
+  color:       #4dffc3;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Value + WHO comparison text */
+.np-bar-info {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  font-size:       11px;
+  font-family:     monospace;
+}
+
+.np-bar-val   { font-weight: 700; font-size: 12px; }
+.np-over      { color: #ff7c00; font-size: 10px; }
+.np-safe      { color: #4dffc3; font-size: 10px; }
+.np-bar-na    { font-size: 11px; color: #555; }
+
+/* ─────────────────────────────
+   PAST PANEL
+───────────────────────────── */
+.np-highlights {
+  display:       flex;
+  gap:           10px;
+  padding:       0 18px 16px;
+}
+
+.np-highlight-box {
+  flex:          1;
+  background:    rgba(255,255,255,0.04);
+  border:        1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding:       12px;
+}
+
+.np-hl-label {
+  font-size:      9px;
+  font-weight:    700;
+  letter-spacing: 0.1em;
+  color:          #555;
+  text-transform: uppercase;
+  margin-bottom:  6px;
+}
+
+.np-hl-month {
+  font-size:   14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.np-hl-val {
+  font-size:   12px;
+  font-weight: 400;
+  font-family: monospace;
+}
+
+/* Chart */
+.np-chart-wrap {
+  position: relative;
+  height:   160px;
+  padding:  0 18px;
+  margin-bottom: 4px;
+}
+
+.np-chart-wrap canvas {
+  width:  100% !important;
+  height: 100% !important;
+}
+
+/* Year table */
+.np-table {
+  width:           100%;
+  border-collapse: collapse;
+  margin:          0 0 6px;
+}
+
+.np-table th {
+  padding:        5px 18px;
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color:          #555;
+  text-align:     left;
+  border-bottom:  1px solid rgba(255,255,255,0.06);
+}
+
+.np-table th:not(:first-child) { text-align: right; padding-right: 18px; }
+
+.np-td-yr  { padding: 7px 18px; color: #888; font-size: 12px; }
+.np-td-num { padding: 7px 18px; text-align: right; font-size: 12px; font-family: monospace; color: #aaa; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.np-td-avg { font-weight: 700; }
+
+/* ─────────────────────────────
+   FUTURE PANEL
+───────────────────────────── */
+.np-model-badges {
+  display:     flex;
+  gap:         8px;
+  padding:     0 18px 14px;
+  flex-wrap:   wrap;
+}
+
+.np-model-pill {
+  padding:       4px 10px;
+  border-radius: 6px;
+  font-size:     10px;
+  font-family:   monospace;
+  font-weight:   600;
+  background:    rgba(199,125,255,0.1);
+  color:         #c77dff;
+  border:        1px solid rgba(199,125,255,0.2);
+}
+
+/* Month chips below chart */
+.np-month-labels {
+  display:         flex;
+  justify-content: space-around;
+  padding:         10px 18px 14px;
+}
+
+.np-month-chip { text-align: center; }
+
+.np-month-pm   { font-size: 15px; font-weight: 700; font-family: monospace; }
+.np-month-name { font-size: 11px; color: #888; margin: 2px 0; }
+.np-month-cat  { font-size: 10px; font-weight: 600; }
+
+/* Alert box */
+.np-alert {
+  display:       flex;
+  align-items:   flex-start;
+  gap:           10px;
+  margin:        0 18px 18px;
+  padding:       12px 14px;
+  background:    rgba(255,77,109,0.08);
+  border:        1px solid rgba(255,77,109,0.25);
+  border-radius: 10px;
+  font-size:     11px;
+  line-height:   1.5;
+  color:         #e2a0aa;
+}
+
+.np-alert-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; color: #ff4d6d; }
+.np-alert strong { color: #ff4d6d; }
+
+/* ─────────────────────────────
+   ROOT STATION NODE (PPF buttons)
+───────────────────────────── */
+.node .header {
+  padding:     14px 16px 12px;
+  cursor:      move;
+  user-select: none;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.node .node-content { padding: 12px 14px; }
+
 .ppf-grid {
   display:               grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap:                   7px;
-  padding:               4px 0 2px;
+  gap:                   8px;
 }
 
 .ppf-btn {
@@ -71,129 +339,20 @@
   flex-direction: column;
   align-items:    center;
   gap:            5px;
-  padding:        12px 6px 10px;
+  padding:        14px 6px 12px;
   background:     rgba(255,255,255,0.04);
-  border:         1px solid rgba(255,255,255,0.1);
-  border-radius:  10px;
+  border:         1px solid rgba(255,255,255,0.08);
+  border-radius:  12px;
   cursor:         pointer;
   transition:     background 0.15s, border-color 0.15s, transform 0.1s;
   color:          #e8e8f0;
 }
 
-.ppf-btn:hover   { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.22); transform: translateY(-1px); }
-.ppf-btn:active  { transform: scale(0.97); }
+.ppf-btn:hover  { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
+.ppf-btn:active { transform: scale(0.97); }
 
-.ppf-icon  { font-size: 20px; font-weight: 700; line-height: 1; }
-.ppf-label { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #888; }
+.ppf-icon  { font-size: 22px; font-weight: 700; line-height: 1; }
+.ppf-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #666; }
 
-.ppf-present               { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.18); }
-.ppf-present .ppf-label    { color: #bbb; }
-
-/* ── Info table (Present popup) ── */
-.info-table {
-  width:           100%;
-  border-collapse: collapse;
-  font-size:       11px;
-  margin-top:      8px;
-}
-
-.info-table th {
-  color:          #555;
-  font-size:      9px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight:    600;
-  padding:        4px 5px 5px;
-  border-bottom:  1px solid rgba(255,255,255,0.08);
-  text-align:     left;
-}
-
-.info-table th:not(:first-child) { text-align: right; }
-
-.info-table td {
-  padding:        4px 5px;
-  border-bottom:  1px solid rgba(255,255,255,0.04);
-  vertical-align: middle;
-}
-
-.info-table td:not(:first-child) { text-align: right; }
-
-/* ── Health badge ── */
-.health-badge {
-  display:       inline-block;
-  padding:       2px 6px;
-  border-radius: 4px;
-  font-size:     9px;
-  font-weight:   700;
-  letter-spacing: 0.04em;
-  white-space:   nowrap;
-  color:         #000;
-}
-
-/* ── WHO comparison pill ── */
-.who-pill        { font-size: 9px; color: #888; white-space: nowrap; }
-.who-pill.over   { color: #ff7c00; }
-.who-pill.safe   { color: #a8e063; }
-
-/* ── Past: year stats section ── */
-.stats-section {
-  margin-top:  10px;
-  border-top:  1px solid rgba(255,255,255,0.07);
-  padding-top: 8px;
-}
-
-.stats-title {
-  font-size:      9px;
-  font-weight:    700;
-  color:          #555;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom:  5px;
-}
-
-/* ── Forecast table (Future popup) ── */
-.forecast-table {
-  width:           100%;
-  border-collapse: collapse;
-  font-size:       11px;
-  margin-top:      8px;
-}
-
-.forecast-table th {
-  color:          #555;
-  font-size:      9px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding:        4px 5px 5px;
-  border-bottom:  1px solid rgba(255,255,255,0.08);
-  text-align:     left;
-}
-
-.forecast-table th:not(:first-child) { text-align: right; }
-
-.forecast-table td {
-  padding:       5px 5px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-
-.forecast-table td:not(:first-child) { text-align: right; }
-
-.conf-range { font-size: 9px; color: #5a5e80; }
-
-/* ── Spawn child button ── */
-.spawn-btn {
-  display:       block;
-  width:         100%;
-  margin-top:    10px;
-  padding:       6px 10px;
-  background:    rgba(79,195,247,0.12);
-  border:        1px solid rgba(79,195,247,0.3);
-  border-radius: 7px;
-  color:         #4fc3f7;
-  font-size:     12px;
-  font-weight:   600;
-  cursor:        pointer;
-  transition:    background 0.15s;
-}
-
-.spawn-btn:hover { background: rgba(79,195,247,0.22); }
+.ppf-present               { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
+.ppf-present .ppf-label    { color: #aaa; }

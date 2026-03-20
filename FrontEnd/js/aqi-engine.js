@@ -122,8 +122,8 @@ function buildPollutantRowsHtml(pollutants) {
   const pollutantValues = {};
 
   pollutants.forEach((p) => {
-    const conc = parseFloat(p.avg_value);
-    const hasData = !isNaN(conc) && p.avg_value !== "NA";
+    const conc     = parseFloat(p.avg_value);
+    const hasData  = !isNaN(conc) && p.avg_value !== "NA";
     const subIndex = hasData ? calculateSubIndex(p.pollutant_id, conc) : null;
 
     pollutantValues[p.pollutant_id] = { conc: hasData ? conc : null, idx: subIndex };
@@ -133,34 +133,51 @@ function buildPollutantRowsHtml(pollutants) {
       prominentPollutant = p.pollutant_id;
     }
 
-    const rowColor  = subIndex ? getAQIColor(subIndex) : "#607d8b";
-    const label     = subIndex ? getAQILabel(subIndex) : "N/A";
     const who       = WHO_LIMITS[p.pollutant_id.toUpperCase()];
-    const unitLabel = who ? who.unit : "μg/m³";
+    const unitLabel = who ? who.unit : "\u03bcg/m\u00b3";
+    const whoLimit  = who ? who.limit : null;
+    const barColor  = subIndex ? getAQIColor(subIndex) : "#607d8b";
 
-    let whoHtml;
-    if (who && hasData) {
-      const ratio = conc / who.limit;
-      const cls   = ratio > 1 ? "over" : "safe";
-      const txt   = ratio > 1
-        ? (ratio.toFixed(1) + "× WHO")
-        : (Math.round((1 - ratio) * 100) + "% below");
-      whoHtml = '<span class="who-pill ' + cls + '">' + txt + "</span>";
+    // Bar shows conc as % of (whoLimit * 3) so WHO limit sits at 33%
+    // This gives a clear visual reference: bar crossing the WHO tick = over limit
+    let barHtml = "";
+    if (hasData && whoLimit) {
+      const scale   = whoLimit * 4;                          // 4× WHO = full bar
+      const pct     = Math.min(100, Math.round((conc / scale) * 100));
+      const whoPct  = Math.round((whoLimit / scale) * 100); // always 25%
+      const overWho = conc > whoLimit;
+
+      barHtml =
+        '<div class="np-bar-track">' +
+          // WHO limit tick
+          '<div class="np-bar-who" style="left:' + whoPct + '%">' +
+            '<div class="np-bar-who-tip">WHO</div>' +
+          "</div>" +
+          // Value fill
+          '<div class="np-bar-fill" style="width:' + pct + '%;background:' + barColor + '"></div>' +
+        "</div>" +
+        '<div class="np-bar-info">' +
+          '<span class="np-bar-val" style="color:' + barColor + '">' + conc.toFixed(1) + " " + unitLabel + "</span>" +
+          '<span class="np-bar-who-txt ' + (overWho ? "np-over" : "np-safe") + '">' +
+            (overWho
+              ? (conc / whoLimit).toFixed(1) + "\u00d7 WHO limit"
+              : Math.round((1 - conc / whoLimit) * 100) + "% below WHO") +
+          "</span>" +
+        "</div>";
+    } else if (hasData) {
+      barHtml =
+        '<div class="np-bar-info">' +
+          '<span class="np-bar-val" style="color:' + barColor + '">' + conc.toFixed(1) + " " + unitLabel + "</span>" +
+        "</div>";
     } else {
-      whoHtml = '<span class="who-pill">—</span>';
+      barHtml = '<div class="np-bar-info"><span style="color:#555">No data</span></div>';
     }
 
-    const concCell = hasData
-      ? (p.avg_value + ' <span style="color:#555;font-size:9px;">' + unitLabel + "</span>")
-      : "NA";
-
     rowsHtml +=
-      '<tr class="poll-row" style="border-left:3px solid ' + rowColor + ';">' +
-      '<td style="color:#ccc;font-weight:600;">' + p.pollutant_id + "</td>" +
-      "<td>" + concCell + "</td>" +
-      "<td>" + whoHtml + "</td>" +
-      '<td><span class="health-badge" style="background:' + rowColor + ';">' + label + "</span></td>" +
-      "</tr>";
+      '<div class="np-bar-row">' +
+        '<div class="np-bar-label">' + p.pollutant_id + "</div>" +
+        barHtml +
+      "</div>";
   });
 
   return { rowsHtml, stationAQI, prominentPollutant, pollutantValues };

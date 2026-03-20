@@ -14,7 +14,6 @@ async function fetchPollutionData() {
   document.body.appendChild(loadingBar);
 
   try {
-    // ── Fetch via backend proxy (avoids browser CORS block on data.gov.in) ──
     const response = await fetch(window.VAYU_CONFIG.API_BASE + "/stations");
 
     if (!response.ok) {
@@ -23,8 +22,8 @@ async function fetchPollutionData() {
 
     const data = await response.json();
 
-    if (data.status !== "ok" || !data.records || data.records.length === 0) {
-      throw new Error(data.message || "No station records returned");
+    if (!data.records || data.records.length === 0) {
+      throw new Error("No records returned");
     }
 
     // Group by station

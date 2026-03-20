@@ -122,8 +122,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
-    <!-- API base config -->
-    <script>window.VAYU_API_BASE = "https://vayu-backend-8qij.onrender.com/api";</script>
+    <!-- API base: defaults to http://localhost:5000/api (set in app.js)
+         Uncomment the line below only when deploying to production:
+    -->
+    <!-- <script>window.VAYU_API_BASE = "https://vayu-backend-8qij.onrender.com/api";</script> -->
 
     <!-- App scripts — load order matters:
          1. aqi-engine    pure functions, no deps

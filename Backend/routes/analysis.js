@@ -8,9 +8,10 @@ const router = express.Router();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ── Load all data files once at startup (fast in-memory reads) ──────────────
-const cityData = JSON.parse(readFileSync(join(__dirname, "../data/city_data.json"), "utf8"));
-const corrData = JSON.parse(readFileSync(join(__dirname, "../data/corr_data.json"), "utf8"));
-const metaData = JSON.parse(readFileSync(join(__dirname, "../data/meta_data.json"), "utf8"));
+const cityData   = JSON.parse(readFileSync(join(__dirname, "../data/city_data.json"),   "utf8"));
+const corrData   = JSON.parse(readFileSync(join(__dirname, "../data/corr_data.json"),   "utf8"));
+const metaData   = JSON.parse(readFileSync(join(__dirname, "../data/meta_data.json"),   "utf8"));
+const cityCoords = JSON.parse(readFileSync(join(__dirname, "../data/city_coords.json"), "utf8"));
 
 // ML service URL — set ML_SERVICE_URL env var on Render to the internal URL of vayu-ml-service
 const ML_SERVICE_URL = process.env.ML_SERVICE_URL || "http://localhost:5001";
@@ -95,18 +96,40 @@ router.get("/past/city/:cityName", (req, res) => {
   });
 });
 
+// ── Build synthetic station records from static data (used as fallback) ──────
+// Returns records in the same shape as CPCB API so data-loader.js needs no changes
+function buildFallbackRecords() {
+  const records = [];
+  Object.entries(cityCoords).forEach(([city, coords]) => {
+    const rows = cityData[city];
+    if (!rows || !rows.length) return;
+    // Use the most recent month's data
+    const latest = rows[rows.length - 1];
+    if (!latest.pm25) return;
+    records.push({
+      station:      city + " — Historical",
+      city,
+      latitude:     String(coords.lat),
+      longitude:    String(coords.lng),
+      pollutant_id: "PM2.5",
+      avg_value:    String(latest.pm25),
+      min_value:    String(latest.pm25),
+      max_value:    String(latest.pm25),
+    });
+  });
+  return records;
+}
+
 // ════════════════════════════════════════════════════════════════════
-// STATIONS — returns ALL raw station records from CPCB, cached 30 min
-// GET /api/stations
-// Used by the frontend map to plot every dot (avoids browser CORS block)
-// ════════════════════════════════════════════════════════════════════
+// STATIONS — live CPCB with static fallback
 router.get("/stations", async (req, res) => {
   const CACHE_KEY = "__all_stations__";
   const cached = liveCache.get(CACHE_KEY);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    return res.json({ status: "ok", records: cached.data, cached: true });
+    return res.json({ status: "ok", records: cached.data, cached: true, source: cached.source });
   }
 
+  // ── Try live CPCB API first ──
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 12000);
@@ -117,15 +140,23 @@ router.get("/stations", async (req, res) => {
     const json = await response.json();
     const records = json.records || [];
     if (!records.length) throw new Error("Empty response from CPCB API");
-    liveCache.set(CACHE_KEY, { data: records, timestamp: Date.now() });
-    res.json({ status: "ok", records, cached: false });
-  } catch (err) {
-    res.status(503).json({
-      status: "error",
-      message: err.name === "AbortError"
-        ? "CPCB API timed out after 12s — try again in a moment."
-        : "Live station data unavailable: " + err.message,
-    });
+
+    liveCache.set(CACHE_KEY, { data: records, timestamp: Date.now(), source: "live" });
+    return res.json({ status: "ok", records, cached: false, source: "live" });
+
+  } catch (liveErr) {
+    // ── Fallback to static city_data.json + city_coords.json ──
+    console.warn("CPCB API unavailable, serving static fallback:", liveErr.message);
+    const records = buildFallbackRecords();
+    if (!records.length) {
+      return res.status(503).json({
+        status: "error",
+        message: "Live API unavailable and no static fallback data found.",
+      });
+    }
+    // Cache fallback for 5 minutes only (shorter than live)
+    liveCache.set(CACHE_KEY, { data: records, timestamp: Date.now() - (CACHE_TTL - 5 * 60 * 1000), source: "static" });
+    return res.json({ status: "ok", records, cached: false, source: "static" });
   }
 });
 

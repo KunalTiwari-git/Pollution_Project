@@ -96,6 +96,34 @@ router.get("/past/city/:cityName", (req, res) => {
 });
 
 // ════════════════════════════════════════════════════════════════════
+// STATIONS — returns ALL raw station records from CPCB, cached 30 min
+// GET /api/stations
+// Used by the frontend map to plot every dot (avoids browser CORS block)
+// ════════════════════════════════════════════════════════════════════
+router.get("/stations", async (req, res) => {
+  const CACHE_KEY = "__all_stations__";
+  const cached = liveCache.get(CACHE_KEY);
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+    return res.json({ status: "ok", records: cached.data, cached: true });
+  }
+
+  try {
+    const response = await fetch(CPCB_URL, { timeout: 10000 });
+    if (!response.ok) throw new Error("CPCB API returned " + response.status);
+    const json = await response.json();
+    const records = json.records || [];
+    if (!records.length) throw new Error("Empty response from CPCB API");
+    liveCache.set(CACHE_KEY, { data: records, timestamp: Date.now() });
+    res.json({ status: "ok", records, cached: false });
+  } catch (err) {
+    res.status(503).json({
+      status: "error",
+      message: "Live station data unavailable: " + err.message,
+    });
+  }
+});
+
+// ════════════════════════════════════════════════════════════════════
 // PRESENT — calls CPCB live API, caches 30 min
 // GET /api/present/city/:cityName
 // Returns: live PM2.5, AQI, colour, "worse than usual?" flag

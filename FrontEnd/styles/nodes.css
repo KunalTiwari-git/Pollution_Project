@@ -1,0 +1,199 @@
+/* ════════════════════════════
+   NODES — floating cards, PPF buttons, tables, badges
+════════════════════════════ */
+
+/* ── Card shell ── */
+.node {
+  position:        absolute;
+  width:           220px;
+  min-width:       200px;
+  min-height:      120px;
+  background:      #1a1b24;
+  border:          1px solid rgba(255,255,255,0.12);
+  border-radius:   12px;
+  overflow:        auto;
+  resize:          both;
+  box-shadow:      0 8px 32px rgba(0,0,0,0.6);
+  pointer-events:  all;
+  transform-origin: top left;
+  font-size:       13px;
+}
+
+.node canvas {
+  width:      100% !important;
+  min-height: 130px;
+  display:    block;
+}
+
+.node .header {
+  padding:     10px 12px;
+  cursor:      move;
+  user-select: none;
+}
+
+.node .node-content { padding: 10px 12px; }
+
+.node .close-btn {
+  position:   absolute;
+  top:        8px;
+  right:      10px;
+  cursor:     pointer;
+  font-size:  16px;
+  color:      rgba(255,255,255,0.5);
+  line-height: 1;
+  z-index:    10;
+  transition: color 0.15s;
+}
+
+.node .close-btn:hover { color: #fff; }
+
+/* ── Present: score row ── */
+.score-container {
+  display:     flex;
+  align-items: baseline;
+  gap:         8px;
+  margin-bottom: 6px;
+}
+
+.aqi-number       { font-size: 36px; font-weight: 700; line-height: 1; }
+.prominent-label  { font-size: 11px; color: #888; }
+
+/* ── PPF grid (Past / Present / Future) ── */
+.ppf-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:                   7px;
+  padding:               4px 0 2px;
+}
+
+.ppf-btn {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            5px;
+  padding:        12px 6px 10px;
+  background:     rgba(255,255,255,0.04);
+  border:         1px solid rgba(255,255,255,0.1);
+  border-radius:  10px;
+  cursor:         pointer;
+  transition:     background 0.15s, border-color 0.15s, transform 0.1s;
+  color:          #e8e8f0;
+}
+
+.ppf-btn:hover   { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.22); transform: translateY(-1px); }
+.ppf-btn:active  { transform: scale(0.97); }
+
+.ppf-icon  { font-size: 20px; font-weight: 700; line-height: 1; }
+.ppf-label { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #888; }
+
+.ppf-present               { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.18); }
+.ppf-present .ppf-label    { color: #bbb; }
+
+/* ── Info table (Present popup) ── */
+.info-table {
+  width:           100%;
+  border-collapse: collapse;
+  font-size:       11px;
+  margin-top:      8px;
+}
+
+.info-table th {
+  color:          #555;
+  font-size:      9px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight:    600;
+  padding:        4px 5px 5px;
+  border-bottom:  1px solid rgba(255,255,255,0.08);
+  text-align:     left;
+}
+
+.info-table th:not(:first-child) { text-align: right; }
+
+.info-table td {
+  padding:        4px 5px;
+  border-bottom:  1px solid rgba(255,255,255,0.04);
+  vertical-align: middle;
+}
+
+.info-table td:not(:first-child) { text-align: right; }
+
+/* ── Health badge ── */
+.health-badge {
+  display:       inline-block;
+  padding:       2px 6px;
+  border-radius: 4px;
+  font-size:     9px;
+  font-weight:   700;
+  letter-spacing: 0.04em;
+  white-space:   nowrap;
+  color:         #000;
+}
+
+/* ── WHO comparison pill ── */
+.who-pill        { font-size: 9px; color: #888; white-space: nowrap; }
+.who-pill.over   { color: #ff7c00; }
+.who-pill.safe   { color: #a8e063; }
+
+/* ── Past: year stats section ── */
+.stats-section {
+  margin-top:  10px;
+  border-top:  1px solid rgba(255,255,255,0.07);
+  padding-top: 8px;
+}
+
+.stats-title {
+  font-size:      9px;
+  font-weight:    700;
+  color:          #555;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom:  5px;
+}
+
+/* ── Forecast table (Future popup) ── */
+.forecast-table {
+  width:           100%;
+  border-collapse: collapse;
+  font-size:       11px;
+  margin-top:      8px;
+}
+
+.forecast-table th {
+  color:          #555;
+  font-size:      9px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding:        4px 5px 5px;
+  border-bottom:  1px solid rgba(255,255,255,0.08);
+  text-align:     left;
+}
+
+.forecast-table th:not(:first-child) { text-align: right; }
+
+.forecast-table td {
+  padding:       5px 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.forecast-table td:not(:first-child) { text-align: right; }
+
+.conf-range { font-size: 9px; color: #5a5e80; }
+
+/* ── Spawn child button ── */
+.spawn-btn {
+  display:       block;
+  width:         100%;
+  margin-top:    10px;
+  padding:       6px 10px;
+  background:    rgba(79,195,247,0.12);
+  border:        1px solid rgba(79,195,247,0.3);
+  border-radius: 7px;
+  color:         #4fc3f7;
+  font-size:     12px;
+  font-weight:   600;
+  cursor:        pointer;
+  transition:    background 0.15s;
+}
+
+.spawn-btn:hover { background: rgba(79,195,247,0.22); }

@@ -1,0 +1,22 @@
+/* ════════════════════════════
+   BASE — reset, variables, body
+════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --topbar-h:   56px;
+  --marker-size: 28px;
+}
+
+html, body {
+  width:      100%;
+  height:     100%;
+  overflow:   hidden;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0c0d13;
+  color:      #e8e8f0;
+}

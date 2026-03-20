@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>AQI Live Map</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- App styles (order matters) -->
+    <link rel="stylesheet" href="styles/base.css"   />
+    <link rel="stylesheet" href="styles/topbar.css" />
+    <link rel="stylesheet" href="styles/map.css"    />
+    <link rel="stylesheet" href="styles/nodes.css"  />
+    <link rel="stylesheet" href="styles/ui.css"     />
   </head>
   <body>
     <!-- TOP BAR -->
@@ -113,11 +118,28 @@
       </button>
     </div>
 
+    <!-- Vendor scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script>
-      window.VAYU_API_BASE = "https://vayu-backend-8qij.onrender.com/api";
-    </script>
-    <script src="script.js"></script>
+
+    <!-- API base config -->
+    <script>window.VAYU_API_BASE = "https://vayu-backend-8qij.onrender.com/api";</script>
+
+    <!-- App scripts — load order matters:
+         1. aqi-engine    pure functions, no deps
+         2. node-manager  uses VAYU.map
+         3. popups        uses aqi-engine + node-manager
+         4. data-loader   uses aqi-engine + node-manager + search
+         5. search        standalone
+         6. metric-toggle uses aqi-engine
+         7. app           wires everything, runs last
+    -->
+    <script src="js/aqi-engine.js"></script>
+    <script src="js/node-manager.js"></script>
+    <script src="js/popups.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/metric-toggle.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

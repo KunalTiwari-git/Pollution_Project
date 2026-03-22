@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Research &amp; Methodology — Vāyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <style>
+      /* Research-page specific styles */
+      .research-hero   { padding: 80px 0 60px; border-bottom: 1px solid var(--border); }
+      .phase-card      { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 20px; }
+      .phase-header    { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 24px; }
+      .phase-badge     { font-family: "DM Mono", monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; flex-shrink: 0; margin-top: 4px; }
+      .phase-title     { font-size: 22px; font-weight: 800; line-height: 1.2; }
+      .phase-subtitle  { font-size: 14px; color: #8b8fad; margin-top: 6px; font-family: "DM Mono", monospace; }
+      .phase-body      { font-size: 15px; line-height: 1.75; color: #9a9ec4; }
+      .phase-body p    { margin-bottom: 14px; }
+      .phase-body strong { color: var(--text); font-weight: 600; }
+      .io-row          { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+      .io-box          { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+      .io-box-label    { font-family: "DM Mono", monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+      .io-box-item     { font-family: "DM Mono", monospace; font-size: 12px; color: #9a9ec4; padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 8px; }
+      .io-box-item:last-child { border-bottom: none; }
+      .io-dot          { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+      .key-decision    { margin-top: 16px; padding: 14px 18px; border-left: 3px solid var(--accent2); background: rgba(255,154,60,0.06); border-radius: 0 8px 8px 0; font-size: 14px; color: #9a9ec4; line-height: 1.65; }
+      .key-decision strong { color: var(--accent2); }
+      .limitation-box  { margin-top: 16px; padding: 14px 18px; border-left: 3px solid var(--accent1); background: rgba(255,77,109,0.06); border-radius: 0 8px 8px 0; font-size: 14px; color: #9a9ec4; line-height: 1.65; }
+      .limitation-box strong { color: var(--accent1); }
+
+      /* Dataset section */
+      .dataset-grid    { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+      .ds-card         { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+      .ds-card-title   { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+      .ds-stat-row     { display: flex; flex-wrap: wrap; gap: 20px; margin: 16px 0; }
+      .ds-stat         { text-align: center; }
+      .ds-stat-val     { font-size: 28px; font-weight: 800; color: var(--accent4); line-height: 1; }
+      .ds-stat-lbl     { font-family: "DM Mono", monospace; font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+      /* Pipeline nav */
+      .pipeline-nav    { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+      .pip-btn         { font-family: "DM Mono", monospace; font-size: 12px; padding: 7px 16px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
+      .pip-btn:hover, .pip-btn.active { border-color: var(--accent4); color: var(--accent4); background: rgba(91,143,255,0.08); }
+
+      /* Conclusions */
+      .conclusion-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 16px; }
+      .conc-num        { font-family: "DM Mono", monospace; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+      .conc-title      { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+      .conc-body       { font-size: 15px; color: #8b8fad; line-height: 1.75; }
+      .conc-body strong { color: var(--text); }
+      .conc-stat       { display: inline-block; font-family: "DM Mono", monospace; font-size: 16px; font-weight: 700; padding: 4px 12px; border-radius: 6px; margin: 2px 4px; }
+
+      @media (max-width: 900px) {
+        .io-row, .dataset-grid { grid-template-columns: 1fr; }
+        .phase-header { flex-direction: column; gap: 10px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="bg-fallback"></div>
+    <video id="bg-video" autoplay muted loop playsinline onerror="this.style.display='none'">
+      <source src="utils/wallpaper.mp4" type="video/mp4" />
+      <source src="utils/wallpaper.webm" type="video/webm" />
+    </video>
+
+    <!-- NAV -->
+    <nav>
+      <div class="wrap nav-inner">
+        <div class="logo">
+          <a href="index.html" style="text-decoration:none;display:flex;align-items:baseline;gap:10px">
+            <span class="logo-mark">Vāyu</span>
+            <span class="logo-text">Pollution × Mortality Research · India</span>
+          </a>
+        </div>
+        <div class="nav-pills">
+          <a class="nav-pill" style="text-decoration:none" href="index.html">Dashboard</a>
+          <a class="nav-pill" style="text-decoration:none" href="map.html">Live AQI Map</a>
+          <a class="nav-pill" style="text-decoration:none;color:var(--accent4);border-color:rgba(91,143,255,0.4)"
+            href="research.html">Research</a>
+        </div>
+        <a class="nav-live" href="map.html"><span class="live-dot"></span>Live AQI ↗</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="wrap research-hero">
+      <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">
+        Research &amp; Methodology
+      </div>
+      <h1 style="font-size:52px;font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin-bottom:20px">
+        How This Study<br />
+        <span style="color:var(--accent4)">Was Built</span>
+      </h1>
+      <p style="font-size:17px;color:#8b8fad;max-width:720px;line-height:1.7;margin-bottom:36px">
+        This page documents every step taken to produce the data shown in the dashboard —
+        from raw government CSV files to cleaned datasets, joined tables, AQI calculations,
+        and machine learning models. Nothing is hidden. Every number on the dashboard
+        is traceable to a specific output file.
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#dataset"    class="pip-btn">Dataset &amp; Source</a>
+        <a href="#cleaning"   class="pip-btn">Data Cleaning</a>
+        <a href="#pipeline"   class="pip-btn" id="pipelineNavBtn">Analysis Pipeline</a>
+        <a href="#conclusions" class="pip-btn">Conclusions</a>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         DATASET & SOURCE
+    ═════════════════════════════════════════════════════════════ -->
+    <section id="dataset" style="padding:72px 0">
+      <div class="wrap">
+        <div class="sec-label">About the Data</div>
+        <div class="sec-title" style="margin-bottom:10px">Dataset &amp; Source</div>
+        <div class="sec-sub">Where the data comes from, what it covers, and who collected it.</div>
+
+        <div class="dataset-grid">
+
+          <div class="ds-card">
+            <div class="ds-card-title" style="color:var(--accent4)">Air Quality Dataset</div>
+            <div style="font-size:14px;color:#8b8fad;line-height:1.7;margin-bottom:16px">
+              Air quality data for Indian cities from 2010 to 2023, collected from the
+              Central Control Room for Air Quality Management.
+            </div>
+            <div class="ds-stat-row">
+              <div class="ds-stat"><div class="ds-stat-val">453</div><div class="ds-stat-lbl">Cities</div></div>
+              <div class="ds-stat"><div class="ds-stat-val">31</div><div class="ds-stat-lbl">States</div></div>
+              <div class="ds-stat"><div class="ds-stat-val">97</div><div class="ds-stat-lbl">Column Types</div></div>
+              <div class="ds-stat"><div class="ds-stat-val">14yr</div><div class="ds-stat-lbl">Coverage</div></div>
+            </div>
+            <div style="font-size:13px;color:#5a5e80;font-family:'DM Mono',monospace;margin-top:12px;line-height:1.6">
+              Source: Central Pollution Control Board (CPCB) — official body of the Government of India
+              for environmental monitoring.<br />
+              Portal: <a href="https://cpcb.nic.in" target="_blank" rel="noopener"
+                style="color:var(--accent4)">cpcb.nic.in</a><br />
+              Collection method: Selenium web automation used to extract and process data from the CPCB portal.
+            </div>
+          </div>
+
+          <div class="ds-card">
+            <div class="ds-card-title" style="color:var(--accent5)">Disease Mortality Dataset</div>
+            <div style="font-size:14px;color:#8b8fad;line-height:1.7;margin-bottom:16px">
+              Air-pollution-attributed deaths across 21 disease categories, from the
+              Global Burden of Disease (GBD) study, state-level and national-level.
+            </div>
+            <div class="ds-stat-row">
+              <div class="ds-stat"><div class="ds-stat-val" style="color:var(--accent5)">21</div><div class="ds-stat-lbl">Disease Causes</div></div>
+              <div class="ds-stat"><div class="ds-stat-val" style="color:var(--accent5)">2010</div><div class="ds-stat-lbl">From</div></div>
+              <div class="ds-stat"><div class="ds-stat-val" style="color:var(--accent5)">2023</div><div class="ds-stat-lbl">To</div></div>
+              <div class="ds-stat"><div class="ds-stat-val" style="color:var(--accent5)">5</div><div class="ds-stat-lbl">Source Files</div></div>
+            </div>
+            <div style="font-size:13px;color:#5a5e80;font-family:'DM Mono',monospace;margin-top:12px;line-height:1.6">
+              Source: Global Burden of Disease (GBD) study, Institute for Health Metrics and Evaluation.<br />
+              Metrics used: Number of deaths (metric_id = 1) and Death rate per 100,000 (metric_id = 3).<br />
+              Risk factor: Air pollution as assigned causal risk.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Acknowledgement -->
+        <div style="margin-top:24px;padding:24px 28px;background:var(--surface);border:1px solid var(--border);
+          border-radius:14px;border-left:4px solid var(--accent3)">
+          <div style="font-size:13px;font-family:'DM Mono',monospace;color:var(--accent3);
+            text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px">Acknowledgement</div>
+          <div style="font-size:15px;color:#9a9ec4;line-height:1.7">
+            The air quality data used in this project has been sourced from the
+            <strong style="color:var(--text)">Central Pollution Control Board (CPCB)</strong>,
+            the official portal of the Government of India, accessible at
+            <a href="https://cpcb.nic.in" target="_blank" rel="noopener"
+              style="color:var(--accent4)">cpcb.nic.in</a>.
+            The CPCB has made this data publicly available. Selenium was used for data collection —
+            a web automation library instrumental in extracting structured measurement data from
+            CPCB's station reporting interface.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         DATA CLEANING — PIPELINE
+    ═════════════════════════════════════════════════════════════ -->
+    <section id="cleaning" style="padding:72px 0;border-top:1px solid var(--border)">
+      <div class="wrap">
+        <div class="sec-label">How the Data Was Cleaned</div>
+        <div class="sec-title" style="margin-bottom:10px">Analysis Pipeline</div>
+        <div class="sec-sub" id="pipeline" style="margin-bottom:40px">
+          Six Jupyter notebooks processed the raw data into the outputs shown on the dashboard.
+          Each phase is documented here in plain language.
+        </div>
+
+        <!-- Phase 0 -->
+        <div class="phase-card">
+          <div class="phase-header">
+            <div class="phase-badge" style="background:rgba(91,143,255,0.12);color:var(--accent4);border:1px solid rgba(91,143,255,0.3)">
+              Phase 0
+            </div>
+            <div>
+              <div class="phase-title">Raw Data Exploration &amp; Station Inventory</div>
+              <div class="phase-subtitle">Notebook: Phase0.ipynb + Phase0.5.ipynb</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <p>
+              <strong>What this notebook does:</strong> Before any cleaning, Phase 0 mapped out
+              exactly what raw data existed. It loaded the station metadata file
+              (<code>stations_info.csv</code>), counted all CSV files (one per city),
+              and catalogued the 97 distinct column names used across 453 stations —
+              since different stations reported different pollutants with different naming conventions.
+            </p>
+            <p>
+              Phase 0.5 explored the disease dataset separately — confirming that all five source
+              files shared the same column structure (GBD standard format), that only
+              <strong>metric_id 1 (Number) and 3 (Rate)</strong> were relevant, and that exactly
+              <strong>21 unique disease cause names</strong> appeared across the files.
+              Row counts were verified: 6,720 + 6,720 + 9,408 + 4,032 + 1,344 = 28,224 total rows.
+            </p>
+          </div>
+          <div class="io-row">
+            <div class="io-box">
+              <div class="io-box-label">Inputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent4)"></span>453 city CSV files (raw CPCB data)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent4)"></span>stations_info.csv</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent5)"></span>5 GBD disease CSV files</div>
+            </div>
+            <div class="io-box">
+              <div class="io-box-label">Output</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>Confirmed column map (97 types → 29 canonical)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>Verified disease schema (21 causes, 2010–2023)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>No files saved — exploration only</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 1 -->
+        <div class="phase-card">
+          <div class="phase-header">
+            <div class="phase-badge" style="background:rgba(255,154,60,0.12);color:var(--accent2);border:1px solid rgba(255,154,60,0.3)">
+              Phase 1
+            </div>
+            <div>
+              <div class="phase-title">Pollution Data Cleaning &amp; Monthly Aggregation</div>
+              <div class="phase-subtitle">Notebook: Phase1.ipynb</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <p>
+              <strong>What this notebook does:</strong> This is the most complex phase.
+              It loads every city CSV, standardises column names, converts units where
+              measurements were recorded in non-standard formats, drops unusable columns,
+              and aggregates hourly readings into monthly means.
+            </p>
+            <p>
+              <strong>The unit conversion problem:</strong> Different stations labelled the
+              same pollutant in different units. For example, a column named <code>NOx (ppm)</code>
+              at one station should produce the same values as <code>NOx (ppb)</code> at another —
+              but 1 ppm = 1,000 ppb. Without correction, those stations would appear to have
+              1,000× less pollution than reality. Ten conversion rules were applied based on the
+              original column label, using atmospheric chemistry constants at 25°C, 1 atm.
+            </p>
+            <p>
+              <strong>Data quality tiering:</strong> Each city was assigned a quality tier
+              (Tier 1 / 2 / 3) based on how many years of data it had and how complete the
+              readings were. Tier 1 cities had the most complete long-term records and were
+              prioritised for the ML model.
+            </p>
+          </div>
+          <div class="key-decision">
+            <strong>Key decision:</strong> Monthly averages were used rather than daily peaks.
+            CPCB AQI is technically defined for 24-hour averages, so monthly-derived AQI values
+            will underestimate actual daily peak AQI. This was acknowledged as an inherent
+            limitation — appropriate for trend analysis and state comparisons, but not for
+            reporting equivalent to official daily AQI readings.
+          </div>
+          <div class="io-row">
+            <div class="io-box">
+              <div class="io-box-label">Inputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent2)"></span>453 city CSVs (hourly readings)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent2)"></span>stations_info.csv (station metadata)</div>
+            </div>
+            <div class="io-box">
+              <div class="io-box-label">Output</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>air_pollution_master.csv</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>City × month rows, 29 pollutant columns</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>Quality tier flag per city-year</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-card">
+          <div class="phase-header">
+            <div class="phase-badge" style="background:rgba(199,125,255,0.12);color:var(--accent5);border:1px solid rgba(199,125,255,0.3)">
+              Phase 2
+            </div>
+            <div>
+              <div class="phase-title">Disease Data Cleaning &amp; Evidence Classification</div>
+              <div class="phase-subtitle">Notebook: phase_2_disease_clean.ipynb</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <p>
+              <strong>What this notebook does:</strong> Loads all five GBD disease files,
+              combines them into a single DataFrame, and filters to keep only Number and Rate
+              metrics (dropping Percent). The national aggregate rows (location = "India") are
+              separated from state-level rows and saved independently.
+            </p>
+            <p>
+              <strong>Evidence strength labelling:</strong> Every disease was assigned one of
+              three labels based on the scientific literature — <strong>direct</strong>
+              (WHO/IARC confirmed causal link, e.g. lung cancer, asthma),
+              <strong>strong</strong> (mechanism well understood, e.g. tuberculosis,
+              upper respiratory infections), or <strong>indirect</strong> (pollution
+              increases systemic vulnerability, e.g. neonatal birth outcomes, congenital defects).
+              These labels drive the colour coding in the correlation chart.
+            </p>
+          </div>
+          <div class="io-row">
+            <div class="io-box">
+              <div class="io-box-label">Inputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent5)"></span>airpollutiondiseases1st.csv through 5th.csv</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent5)"></span>28,224 total rows before filtering</div>
+            </div>
+            <div class="io-box">
+              <div class="io-box-label">Outputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>disease_master.csv (state-level)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>disease_national.csv (India aggregate)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>evidence_strength column added to all rows</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-card">
+          <div class="phase-header">
+            <div class="phase-badge" style="background:rgba(77,255,195,0.10);color:var(--accent3);border:1px solid rgba(77,255,195,0.3)">
+              Phase 3
+            </div>
+            <div>
+              <div class="phase-title">Joining Pollution and Disease Data</div>
+              <div class="phase-subtitle">Notebook: phase_3_join.ipynb</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <p>
+              <strong>The fundamental mismatch:</strong> Pollution data is at
+              <strong>city × month</strong> level. Disease data is at
+              <strong>state × year</strong> level. They cannot be joined directly.
+            </p>
+            <p>
+              Phase 3 solves this by collapsing pollution data from city-month rows up to state-year
+              rows — computing the mean PM2.5 (and other pollutants) per state per year, weighted
+              by data coverage. The result is then joined to the disease data on the keys
+              <strong>state name + year</strong>.
+            </p>
+            <p>
+              State name standardisation was critical: CPCB uses different naming conventions
+              from GBD (e.g. "Jammu and Kashmir" vs "Jammu &amp; Kashmir and Ladakh"). A manual
+              mapping was applied to ensure clean joins rather than silent NaN mismatches.
+            </p>
+          </div>
+          <div class="key-decision">
+            <strong>Key decision:</strong> Only rows with <code>join_quality == 'full'</code>
+            were used in the machine learning analysis — meaning both pollution AND disease data
+            were present for that state-year combination. Partial joins were excluded to avoid
+            biased model training.
+          </div>
+          <div class="io-row">
+            <div class="io-box">
+              <div class="io-box-label">Inputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>air_pollution_master.csv (Phase 1)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>disease_master.csv (Phase 2)</div>
+            </div>
+            <div class="io-box">
+              <div class="io-box-label">Output</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>combined_master.csv (state × year)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>Main analysis table used throughout the project</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase-card">
+          <div class="phase-header">
+            <div class="phase-badge" style="background:rgba(255,77,109,0.10);color:var(--accent1);border:1px solid rgba(255,77,109,0.3)">
+              Phase 4
+            </div>
+            <div>
+              <div class="phase-title">CPCB AQI Calculation</div>
+              <div class="phase-subtitle">Notebook: phase_4_aqi.ipynb</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <p>
+              <strong>What this notebook does:</strong> Applies the official CPCB AQI breakpoint
+              tables (from the Ministry of Earth Sciences Standard Operating Procedure, citing
+              CPCB National Air Quality Index 2014) to compute a sub-index per pollutant for
+              each city-month. The final AQI is the maximum sub-index across all available pollutants.
+            </p>
+            <p>
+              <strong>Pollutants used:</strong> PM2.5, PM10, NO₂, SO₂, CO, NH₃, and Ozone.
+              Lead (Pb) is excluded — it is not measured in the CPCB station network dataset.
+              The AQI formula uses linear interpolation between official breakpoint pairs.
+            </p>
+          </div>
+          <div class="limitation-box">
+            <strong>Critical limitation:</strong> CPCB AQI is designed for 24-hour averages
+            (PM2.5, PM10, NO₂, SO₂, NH₃) and 8-hour averages (CO, Ozone). This project uses
+            monthly averages. Monthly means are lower than daily peaks — AQI derived from monthly
+            data will systematically underestimate actual daily AQI. This is acceptable for
+            trend analysis and relative state comparisons, but these figures should not be
+            reported as equivalent to official CPCB daily AQI readings.
+          </div>
+          <div class="io-row">
+            <div class="io-box">
+              <div class="io-box-label">Inputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent1)"></span>air_pollution_master.csv (Phase 1)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent1)"></span>CPCB breakpoint tables (hardcoded from SOP)</div>
+            </div>
+            <div class="io-box">
+              <div class="io-box-label">Outputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>air_pollution_with_aqi.csv (city × month + AQI)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>combined_master.csv updated with state-year AQI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="phase-card">
+          <div class="phase-header">
+            <div class="phase-badge" style="background:rgba(91,143,255,0.12);color:var(--accent4);border:1px solid rgba(91,143,255,0.3)">
+              Phase 5
+            </div>
+            <div>
+              <div class="phase-title">Machine Learning Models</div>
+              <div class="phase-subtitle">Notebook: phase_5_ml.ipynb</div>
+            </div>
+          </div>
+          <div class="phase-body">
+            <p>
+              <strong>Two separate predictive tasks were defined:</strong>
+            </p>
+            <p>
+              <strong>Task B (done first — simpler):</strong> Does state-level PM2.5 exposure
+              predict disease death rates? Ordinary Least Squares (OLS) linear regression was
+              applied for each of the 21 disease categories separately. Death rate (per 100,000
+              population) was used as the target — not raw death count — to control for the
+              large population differences between states. The model was trained on 96
+              state-year observations.
+            </p>
+            <p>
+              <strong>Task A (time-series ML):</strong> Predict next month's city-level PM2.5
+              from current pollution and weather. The model progression rule was:
+              start with Linear Regression. If R² ≥ 0.6, stop. Since Linear Regression
+              achieved R² = 0.47 on the test set, a Random Forest was trained next.
+              Random Forest achieved R² = 0.594 on the test set.
+            </p>
+          </div>
+          <div class="key-decision">
+            <strong>Key decision — no data leakage:</strong> For Task A, the train/test split
+            was done strictly by time. Training data = 2015–2020. Test data = 2021–2023.
+            sklearn's <code>train_test_split()</code> was explicitly not used — it shuffles rows
+            randomly, which would allow the model to train on 2022 data while testing on 2019
+            data. That would produce artificially inflated accuracy. Time-based splitting
+            is the only valid approach for time-series forecasting.
+          </div>
+          <div class="io-row">
+            <div class="io-box">
+              <div class="io-box-label">Inputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent4)"></span>combined_master.csv (Task B)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent4)"></span>air_pollution_with_aqi.csv (Task A)</div>
+            </div>
+            <div class="io-box">
+              <div class="io-box-label">Outputs</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>rf_model.pkl (Random Forest, saved model)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>scaler.pkl (feature scaler)</div>
+              <div class="io-box-item"><span class="io-dot" style="background:var(--accent3)"></span>Task B R² scores: 0.19 – 0.71 across diseases</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         CONCLUSIONS
+    ═════════════════════════════════════════════════════════════ -->
+    <section id="conclusions" style="padding:72px 0;border-top:1px solid var(--border)">
+      <div class="wrap">
+        <div class="sec-label">What the Outputs Tell Us</div>
+        <div class="sec-title" style="margin-bottom:10px">Conclusions</div>
+        <div class="sec-sub" style="margin-bottom:40px">
+          What the data actually shows about India's air quality crisis and its
+          measurable impact on human health.
+        </div>
+
+        <div class="conclusion-card">
+          <div class="conc-num">01</div>
+          <div class="conc-title" style="color:var(--accent1)">India's air is dangerously far from safe — and remains so</div>
+          <div class="conc-body">
+            The national average PM2.5 was
+            <span class="conc-stat" style="background:rgba(255,77,109,0.12);color:var(--accent1)">65.1 μg/m³</span>
+            in 2023 — over <strong>13 times the WHO guideline</strong> of 5 μg/m³ per year.
+            Even India's own national standard of 40 μg/m³ is regularly exceeded across most major states.
+            The data shows a general improvement from a peak of 142.9 μg/m³ in 2013, but pollution
+            rose again sharply in 2023, suggesting the improvement is not stable.
+            Bihar, Uttar Pradesh, and Delhi consistently record the highest concentrations —
+            all above 94 μg/m³ on average over the study period.
+          </div>
+        </div>
+
+        <div class="conclusion-card">
+          <div class="conc-num">02</div>
+          <div class="conc-title" style="color:var(--accent2)">Over 10 million people die annually from air-pollution-linked diseases</div>
+          <div class="conc-body">
+            Across all 21 GBD disease categories attributed to air pollution,
+            <span class="conc-stat" style="background:rgba(255,154,60,0.12);color:var(--accent2)">10.83 million deaths</span>
+            were recorded for 2023 — roughly one death every 3 seconds.
+            Cardiovascular diseases account for the largest share (~3.1 million),
+            followed by chronic respiratory diseases (~1.25 million) and stroke (~1.03 million).
+            The 2021 spike to 12.09 million reflects COVID-19's compounding effect on
+            pollution-vulnerable populations, particularly those with pre-existing respiratory conditions.
+          </div>
+        </div>
+
+        <div class="conclusion-card">
+          <div class="conc-num">03</div>
+          <div class="conc-title" style="color:var(--accent5)">Pollution has statistically measurable effects on birth outcomes</div>
+          <div class="conc-body">
+            The strongest Pearson correlation found was between PM2.5 and
+            <strong>upper respiratory infections</strong> (r = +0.684, p &lt; 0.001).
+            Critically, neonatal outcomes showed large positive correlations —
+            neonatal encephalopathy (r = +0.664) and neonatal preterm birth (r = +0.498)
+            both rise significantly with pollution levels.
+            The Task B linear regression confirmed this: neonatal encephalopathy had the
+            highest R² of any disease (0.71) — meaning PM2.5 alone explains
+            <strong>71% of the variation in neonatal brain injury deaths across states.</strong>
+            This is a public health finding with direct policy implications.
+          </div>
+        </div>
+
+        <div class="conclusion-card">
+          <div class="conc-num">04</div>
+          <div class="conc-title" style="color:var(--accent4)">The ML model can predict next-month PM2.5 with moderate accuracy</div>
+          <div class="conc-body">
+            The Random Forest model trained on monthly lag features and weather variables
+            achieved a test-set R² of
+            <span class="conc-stat" style="background:rgba(91,143,255,0.12);color:var(--accent4)">0.594</span>
+            and a mean absolute error of ±16.04 μg/m³ — predicting entirely on
+            held-out 2021–2023 data it had never seen. This is a meaningful result:
+            the model explains 59.4% of monthly PM2.5 variation using only lagged pollution
+            and weather inputs. Its largest failure mode is during sudden weather events
+            (monsoon onset, dust storms) that are difficult to capture with smooth monthly inputs.
+            Improvements are possible with daily data and geospatial features.
+          </div>
+        </div>
+
+        <div class="conclusion-card">
+          <div class="conc-num">05</div>
+          <div class="conc-title" style="color:var(--accent3)">What India's pollution crisis means going forward</div>
+          <div class="conc-body">
+            This study demonstrates that the relationship between PM2.5 exposure and disease
+            deaths in India is <strong>statistically real, measurable, and consistent across
+            multiple analytical approaches</strong> — correlation analysis, regression modelling,
+            and time-series forecasting all point to the same conclusion.
+            The states with the highest pollution levels are home to hundreds of millions of
+            people. Uttar Pradesh, with an average PM2.5 of 84.3 μg/m³, has the highest cumulative death toll in this dataset — 24,165,000 deaths attributed to air pollution across all available years.
+            Without significant intervention — industrial regulation, cleaner transport,
+            and agricultural fire controls — the pollution levels and associated death tolls
+            shown in this dataset will continue or worsen. The model's ability to forecast
+            future PM2.5 levels creates an opportunity for early warning systems that
+            can help healthcare systems prepare for high-pollution periods.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap footer-inner">
+        <div>
+          <span style="color:var(--text);font-weight:700">Vāyu Research · 2025</span>
+          <span style="margin:0 12px;color:var(--border2)">|</span>
+          Data: CPCB via cpcb.nic.in · Global Burden of Disease (GBD) Dataset
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Dashboard</a>
+          <a href="map.html">AQI Live Map</a>
+          <a href="https://cpcb.nic.in" target="_blank" rel="noopener">CPCB Source ↗</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

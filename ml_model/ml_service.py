@@ -44,7 +44,15 @@ BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 
 # CSV data lives one level up in Backend/data/
-AQI_CSV = os.path.join(BASE_DIR, "city_data.json")
+# city_data.json lives in Backend/data/ — try multiple paths so it works
+# both locally (../Backend/data/) and on Render (copied into ml_model/ by buildCommand)
+_data_candidates = [
+    os.environ.get("CITY_DATA_PATH", ""),                              # env override
+    os.path.join(BASE_DIR, "city_data.json"),                          # copied into ml_model/
+    os.path.join(BASE_DIR, "..", "Backend", "data", "city_data.json"), # local dev
+    os.path.join(BASE_DIR, "..", "data", "city_data.json"),
+]
+AQI_CSV = next((p for p in _data_candidates if p and os.path.exists(p)), None)
 
 # ── Load model + scaler at startup ──
 rf_model = None
@@ -68,12 +76,15 @@ def load_models():
 # ── Load AQI data for building lag features ──────────────────────────
 import json
 city_data = {}
-try:
-    with open(AQI_CSV) as f:
-        city_data = json.load(f)
-    print(f"✅  City data loaded: {len(city_data)} cities")
-except Exception as e:
-    print(f"⚠️   Could not load city data: {e}")
+if AQI_CSV is None:
+    print("⚠️   city_data.json not found. Set CITY_DATA_PATH env var or copy it to ml_model/")
+else:
+    try:
+        with open(AQI_CSV) as f:
+            city_data = json.load(f)
+        print(f"✅  City data loaded: {len(city_data)} cities from {AQI_CSV}")
+    except Exception as e:
+        print(f"⚠️   Could not load city data: {e}")
 
 # ── Feature columns — must match Phase 5 training order exactly ──────
 FEATURE_COLS = [

@@ -1,6 +1,8 @@
-flask
-flask-cors
-numpy
-pandas
-scikit-learn
-python-dotenv
+# DO NOT upgrade scikit-learn without retraining and re-saving rf_model.pkl,
+# because pickle files are tied to the sklearn version they were created with.
+flask==3.1.2
+flask-cors==4.0.1
+numpy==2.1.0
+pandas==2.2.3
+scikit-learn==1.5.2
+python-dotenv==1.0.1

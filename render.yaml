@@ -28,6 +28,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: ML_SERVICE_URL
-        value: https://vayu-ml-service.onrender.com
+        value: https://vayu-ml-service-2iuo.onrender.com
       - key: FRONTEND_URL
         sync: false

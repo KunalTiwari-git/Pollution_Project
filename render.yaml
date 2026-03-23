@@ -48,4 +48,5 @@ services:
       # Set this to your Vercel URL after deploying the frontend
       # Example: https://vayu.vercel.app
       - key: FRONTEND_URL
-        fromInput: true
+        value: ""
+        sync: false

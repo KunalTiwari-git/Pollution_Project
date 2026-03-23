@@ -6,14 +6,17 @@
     <title>AQI Live Map</title>
 
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
 
     <!-- App styles (order matters) -->
-    <link rel="stylesheet" href="styles/base.css"   />
+    <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/topbar.css" />
-    <link rel="stylesheet" href="styles/map.css"    />
-    <link rel="stylesheet" href="styles/nodes.css"  />
-    <link rel="stylesheet" href="styles/ui.css"     />
+    <link rel="stylesheet" href="styles/map.css" />
+    <link rel="stylesheet" href="styles/nodes.css" />
+    <link rel="stylesheet" href="styles/ui.css" />
   </head>
   <body>
     <!-- TOP BAR -->
@@ -122,10 +125,9 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
-    <!-- API base: defaults to http://localhost:5000/api (set in app.js)
-         Uncomment the line below only when deploying to production:
-    -->
-    <!-- <script>window.VAYU_API_BASE = "https://vayu-backend-8qij.onrender.com/api";</script> -->
+    <script>
+      window.VAYU_API_BASE = "https://vayu-backend-2iuo.onrender.com/api";
+    </script>
 
     <!-- App scripts — load order matters:
          1. aqi-engine    pure functions, no deps

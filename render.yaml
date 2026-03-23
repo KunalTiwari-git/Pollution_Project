@@ -1,19 +1,6 @@
-# render.yaml — Vāyu Project
-# Place this file in the ROOT of your GitHub repository.
-#
-# Deploys two services:
-#   1. vayu-ml-service  — Python Flask (port auto-assigned by Render)
-#   2. vayu-backend     — Node.js Express (port auto-assigned by Render)
-#
-# After BOTH services are deployed, update FRONTEND_URL in vayu-backend
-# to your Vercel URL (e.g. https://vayu.vercel.app).
-#
-# The ML service URL is connected via Render's internal networking using
-# the service name — no hardcoded subdomains needed.
-
 services:
 
-  # ── 1. Python ML Service ──────────────────────────────────────────
+  # ── 1. Python ML Service ───
   - type: web
     name: vayu-ml-service
     runtime: python
@@ -27,7 +14,7 @@ services:
       - key: CITY_DATA_PATH
         value: /opt/render/project/src/ml_model/city_data.json
 
-  # ── 2. Node.js Backend ────────────────────────────────────────────
+  # ── 2. Node.js Backend ────
   - type: web
     name: vayu-backend
     runtime: node
@@ -40,13 +27,7 @@ services:
         value: "20.0.0"
       - key: NODE_ENV
         value: production
-      # Internal Render URL — uses service name, no hardcoding
-      # Format: https://<service-name>.onrender.com
-      # Replace with your actual ML service URL after first deploy
       - key: ML_SERVICE_URL
         value: https://vayu-ml-service.onrender.com
-      # Set this to your Vercel URL after deploying the frontend
-      # Example: https://vayu.vercel.app
       - key: FRONTEND_URL
-        value: ""
         sync: false

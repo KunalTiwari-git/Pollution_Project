@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import analysisRoutes from "./routes/analysis.js";
 import "dotenv/config";
-
+import waterRoutes from "./routes/water.js";
 const app = express();
-const PORT = process.env.PORT||5000;
+const PORT = process.env.PORT || 5000;
 
 // Allow frontend — add your Render frontend URL here after deploying
 const allowedOrigins = process.env.FRONTEND_URL
@@ -17,7 +17,7 @@ app.use(express.json());
 
 // ── Routes ──
 app.use("/api", analysisRoutes);
-
+app.use("/api/water", waterRoutes);
 // ── Health check ──
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", message: "Vayu backend is running" });
